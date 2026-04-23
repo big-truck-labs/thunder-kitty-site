@@ -1,0 +1,14 @@
+{
+  "name": "thunder-kitty-site",
+  "version": "1.0.0",
+  "description": "Marketing site for Thunder Kitty — local-first meeting transcription for macOS",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "prettier": "^3.8.1"
+  }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} | {{ client.name }}</title>
+    <meta
+      name="description"
+      content="{{ description or site.defaultDescription }}"
+    />
+
+    {% if noindex %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
+
+    <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
+    <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
+    <meta property="og:title" content="{{ title }} | {{ client.name }}" />
+    <meta
+      property="og:description"
+      content="{{ description or site.defaultDescription }}"
+    />
+    <meta
+      property="og:image"
+      content="{{ client.domain }}{{ ogImage or site.defaultOgImage }}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ client.name }}" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    {% if site.analyticsId %}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ site.analyticsId }}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{{ site.analyticsId }}");
+    </script>
+    {% endif %} {# Page-specific CSS. Two ways to load it: #} {# 1. Front matter
+    key (works for both layout: and {% extends %} pages): #} {# pageCss:
+    page-name.css #} {# 2. Override {% block head %} in {% extends %} templates:
+    #} {# {% block head %}
+    <link rel="stylesheet" href="/css/page.css" />
+    {% endblock %} #} {% block head %}{% if pageCss %}
+    <link rel="stylesheet" href="/css/{{ pageCss }}" />
+    {% endif %}{% endblock %}
+  </head>
+  <body>
+    {% include "components/header.html" %}
+
+    <main class="{{ mainClass }}">{% block body %}{% endblock %}</main>
+
+    {% include "components/footer.html" %} {% block scripts %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Thunder Kitty",
+  "domain": "https://www.thunderkitty.app",
+  "email": "hello@thunderkitty.app",
+  "phone": "",
+  "phoneTel": "",
+  "address": {
+    "street": "",
+    "city": "",
+    "state": "",
+    "zip": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "pinterest": "",
+    "youtube": "",
+    "linkedin": ""
+  }
+}

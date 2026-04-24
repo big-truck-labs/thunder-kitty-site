@@ -1,8 +1,226 @@
 ---
 title: Privacy Policy
-description: Thunder Kitty privacy policy.
+description: How Thunder Kitty handles your data. The short version — it doesn't leave your Mac.
+pageCss: legal.css
 ---
 
 {% extends "layouts/base.html" %} {% block body %}
-<h1>Privacy Policy</h1>
+
+<div class="legal">
+  <h1>Privacy Policy</h1>
+  <p><em>Last updated: April 24, 2026</em></p>
+
+  <h2>The short version</h2>
+  <p>
+    Thunder Kitty runs on your Mac. Your audio, your transcripts, and your notes
+    stay on your Mac. We can't read them — we have no way to.
+  </p>
+  <p>
+    This page explains that in more detail, and covers the small number of
+    things that
+    <em>do</em>
+    involve our servers (subscription management and software updates).
+  </p>
+
+  <h2>The app</h2>
+
+  <h3>What the app collects</h3>
+  <p>
+    <strong>Nothing about your content.</strong>
+    Your audio, transcripts, notes, and calendar data never leave your machine.
+    We have no cloud, no database of your recordings, no dashboard where we can
+    see what you're doing.
+  </p>
+  <p>
+    Transcription runs on your Mac using Apple's
+    <code>SpeechAnalyzer</code>
+    framework (macOS 26+). If you use Apple Intelligence for summaries, that
+    also runs on-device.
+  </p>
+  <p>
+    If you opt to use a third-party AI (by providing your own API key for
+    Claude, OpenAI, or similar), your transcript text is sent to
+    <em>that provider</em>
+    when you ask the AI to read it — subject to
+    <em>their</em>
+    privacy policy, not ours. We never see it.
+  </p>
+
+  <h3>What the app does need the network for</h3>
+  <p>Two things, both small:</p>
+  <p>
+    <strong>License validation.</strong>
+    When you start your trial or activate a paid subscription, Thunder Kitty
+    contacts our server to verify your license. This is a request containing
+    your license key (a random string — not linked to your identity) and your
+    app version. We use this to prevent license sharing and to let you know when
+    your trial or subscription ends. We do not log your IP address beyond what
+    any web server logs by default for security and abuse prevention.
+  </p>
+  <p>
+    <strong>Software updates.</strong>
+    Thunder Kitty uses
+    <a href="https://sparkle-project.org">Sparkle</a>
+    , an open-source update framework, to check for new versions. Update files
+    are hosted on GitHub at
+    <a href="https://github.com/big-truck-labs/thunder-kitty-releases">
+      github.com/big-truck-labs/thunder-kitty-releases
+    </a>
+    . When the app checks for updates, a request is made to GitHub to read our
+    public
+    <code>appcast.xml</code>
+    file. GitHub may log that request. We do not receive any data from these
+    checks beyond what GitHub provides in aggregated analytics.
+  </p>
+
+  <h3>How to verify for yourself</h3>
+  <p>Don't just take our word for it. You can:</p>
+  <ul>
+    <li>
+      Open Activity Monitor → Network and watch what Thunder Kitty does while
+      you record. You'll see nothing during transcription.
+    </li>
+    <li>
+      Turn on Airplane Mode. Thunder Kitty will transcribe just fine. (License
+      validation and updates will pause until you're back online, but your work
+      won't.)
+    </li>
+    <li>Block Thunder Kitty in your firewall. The app still works.</li>
+  </ul>
+
+  <h2>The website</h2>
+  <p>
+    This website (thunderkitty.app) uses Google Analytics to understand how
+    people find and use the site — things like which pages they visit, how they
+    got here, and whether the site works correctly across browsers. Google
+    Analytics collects anonymized usage data. None of this is connected to the
+    app, and none of the app's data is ever sent to Google.
+  </p>
+  <p>
+    You can opt out of Google Analytics by installing the
+    <a href="https://tools.google.com/dlpage/gaoptout">
+      Google Analytics Opt-out Browser Add-on
+    </a>
+    or by using a browser that blocks trackers.
+  </p>
+
+  <h2>Permissions the app asks for</h2>
+  <p>Thunder Kitty asks macOS for only the permissions it needs to function:</p>
+  <ul>
+    <li>
+      <strong>Microphone</strong>
+      — to record your audio
+    </li>
+    <li>
+      <strong>Speech recognition</strong>
+      — to transcribe your audio on-device via Apple's
+      <code>SpeechAnalyzer</code>
+      framework
+    </li>
+    <li>
+      <strong>Screen recording</strong>
+      — required by macOS to capture system audio from other apps (Zoom, Meet,
+      Teams, etc.). Thunder Kitty does not record your screen.
+    </li>
+    <li>
+      <strong>Calendar access</strong>
+      — to show your meetings for the day and associate recordings with the
+      events they belong to. Thunder Kitty only reads from Calendar; it never
+      writes, modifies, or deletes calendar events. Calendar data stays on your
+      Mac. We never receive it.
+    </li>
+    <li>
+      <strong>Notifications</strong>
+      — to alert you before meetings start and when a recording begins. You can
+      turn notifications off entirely in macOS System Settings.
+    </li>
+  </ul>
+  <p>
+    You can grant or revoke any of these permissions at any time via
+    <strong>System Settings → Privacy &amp; Security</strong>
+    . The app will still function for what each permission supports — e.g., if
+    you deny calendar access, the meetings list in Thunder Kitty will be empty,
+    but transcription still works.
+  </p>
+
+  <h2>Your data is yours</h2>
+  <p>
+    All of it. Your transcripts and notes live in your file system, in a
+    directory you choose, as plain Markdown files. You can:
+  </p>
+  <ul>
+    <li>Edit, rename, delete, or move them however you want</li>
+    <li>Back them up with Time Machine, iCloud, Dropbox, or not at all</li>
+    <li>Open them in any text editor, AI, or note-taking app</li>
+    <li>Share them with anyone, or keep them private</li>
+  </ul>
+  <p>
+    If you cancel your subscription, you keep access to every transcript and
+    note you created. You can continue to open, edit, and read them in Thunder
+    Kitty indefinitely. Only new transcription requires an active subscription.
+  </p>
+
+  <h2>Using Thunder Kitty on multiple Macs</h2>
+  <p>
+    One subscription covers all the Macs
+    <em>you personally use</em>
+    — your work laptop, your home iMac, a travel Mac, etc. There's no device
+    cap, and no extra fee for running the app on more than one machine.
+  </p>
+  <p>
+    Because your notes are ordinary Markdown files in a folder you choose, you
+    can point Thunder Kitty at any synced folder (iCloud Drive, Dropbox, Google
+    Drive, OneDrive) and your notes will appear on every Mac you use. We don't
+    operate a sync service; macOS and your sync tool do that work. Thunder Kitty
+    just reads and writes files to the folder you picked.
+  </p>
+
+  <h2>Two-party consent notice</h2>
+  <p>
+    Recording conversations is regulated by law. Some jurisdictions — including
+    <strong>California, Florida, Illinois, Pennsylvania, and Hawaii</strong>
+    — require
+    <em>all parties</em>
+    to consent before being recorded.
+  </p>
+  <p>
+    It is
+    <strong>your responsibility</strong>
+    to comply with applicable laws wherever you and the other parties are
+    located. When in doubt, ask for consent.
+  </p>
+
+  <h2>Payments</h2>
+  <p>
+    Subscriptions are processed by
+    <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>
+    , which acts as the Merchant of Record for Thunder Kitty. When you
+    subscribe, Lemon Squeezy handles your payment information — we never see or
+    store your credit card details. Lemon Squeezy's privacy policy governs that
+    data.
+  </p>
+  <p>
+    We receive from Lemon Squeezy only what we need: your email address (to send
+    you your license key and billing receipts) and whether your subscription is
+    active.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If we change this policy in any material way, we'll update the date at the
+    top and note the change in the Thunder Kitty changelog. Continued use after
+    changes implies acceptance.
+  </p>
+
+  <h2>Questions</h2>
+  <p>
+    Email
+    <a href="mailto:hello@thunderkitty.app">hello@thunderkitty.app</a>
+    . A human will reply.
+  </p>
+
+  <hr />
+  <p>Thunder Kitty is built by Big Truck Labs.</p>
+</div>
+
 {% endblock %}

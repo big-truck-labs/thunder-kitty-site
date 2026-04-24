@@ -43,11 +43,55 @@
   margin-bottom: var(--space-md);
 }
 .legal ul {
+  list-style: disc;
   margin-bottom: var(--space-md);
   padding-left: 1.5rem;
 }
 .legal ul li {
   margin-bottom: var(--space-xs);
+}
+.legal ol {
+  list-style: decimal;
+  margin-bottom: var(--space-md);
+  padding-left: 1.5rem;
+}
+.legal ol > li {
+  margin-bottom: var(--space-md);
+}
+.legal ol > li ul {
+  margin-top: var(--space-xs);
+}
+
+.legal details {
+  margin-bottom: var(--space-sm);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  padding: 0;
+}
+.legal details summary {
+  font-weight: 600;
+  color: var(--color-ink);
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+  list-style: none;
+}
+.legal details summary::-webkit-details-marker {
+  display: none;
+}
+.legal details summary::before {
+  content: "+";
+  display: inline-block;
+  width: 1.25em;
+  font-weight: 400;
+  color: var(--color-ink-faded);
+}
+.legal details[open] summary::before {
+  content: "\2212";
+}
+.legal details > p,
+.legal details > ul {
+  padding: 0 var(--space-md) var(--space-sm) calc(var(--space-md) + 1.25em);
+  margin-bottom: 0;
 }
 
 .legal strong {

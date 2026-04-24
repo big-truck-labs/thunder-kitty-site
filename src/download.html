@@ -1,0 +1,128 @@
+---
+title: Download Thunder Kitty
+description: Thunder Kitty is downloading. How to install, troubleshooting, and macOS permissions.
+pageCss: legal.css
+noindex: true
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<!-- TODO: Uncomment auto-download script once DMG is uploaded to thunder-kitty-releases
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    var link = document.createElement('a');
+    link.href = '/downloads/Thunder-Kitty.dmg';
+    link.click();
+  });
+</script>
+-->
+
+<div class="legal">
+  <h1>You're in.</h1>
+  <p>
+    The download will be available shortly. Check back soon, or
+    <a href="mailto:hello@thunderkitty.app">email us</a>
+    and we'll send it your way.
+  </p>
+  <p>
+    <code>Thunder-Kitty.dmg</code>
+    &middot; ~TBD MB &middot; Requires macOS 26 (Tahoe) or later, Apple Silicon
+  </p>
+
+  <hr />
+
+  <h2>How to install</h2>
+
+  <ol>
+    <li>
+      <strong>Open the DMG.</strong>
+      Double-click
+      <code>Thunder-Kitty.dmg</code>
+      in your Downloads folder.
+    </li>
+    <li>
+      <strong>Drag to Applications.</strong>
+      Drag Thunder Kitty into your Applications folder.
+    </li>
+    <li>
+      <strong>Launch and grant permissions.</strong>
+      Open Thunder Kitty. You'll be asked to grant a handful of macOS
+      permissions &mdash; here's what each one is for:
+      <ul>
+        <li>
+          <strong>Microphone</strong>
+          &mdash; to record you
+        </li>
+        <li>
+          <strong>Speech Recognition</strong>
+          &mdash; to transcribe on-device
+        </li>
+        <li>
+          <strong>Screen Recording</strong>
+          &mdash; to capture system audio from other apps (we don't record your
+          screen)
+        </li>
+        <li>
+          <strong>Calendar</strong>
+          (optional) &mdash; to show today's meetings in the sidebar
+        </li>
+        <li>
+          <strong>Notifications</strong>
+          (optional) &mdash; to nudge you before meetings start
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>That's it. You're running Thunder Kitty entirely on your Mac.</p>
+
+  <hr />
+
+  <h2>Having trouble?</h2>
+
+  <details>
+    <summary>
+      &ldquo;Thunder Kitty can't be opened because Apple cannot check it for
+      malicious software&rdquo;
+    </summary>
+    <p>
+      This is macOS being cautious about apps outside the App Store. Right-click
+      Thunder Kitty in your Applications folder and choose
+      <strong>Open</strong>
+      . Click
+      <strong>Open</strong>
+      again in the dialog. You only have to do this once.
+    </p>
+  </details>
+
+  <details>
+    <summary>No audio is being captured</summary>
+    <p>
+      Make sure you've granted Microphone and Screen Recording permissions in
+      <strong>System Settings &rarr; Privacy &amp; Security</strong>
+      . Quit and relaunch Thunder Kitty after granting access.
+    </p>
+  </details>
+
+  <details>
+    <summary>The app won't launch at all</summary>
+    <p>
+      Thunder Kitty requires macOS 26 (Tahoe) or later, on Apple Silicon. If
+      you're on an earlier version of macOS, the app won't run on your machine.
+      Support for macOS 14 and 15 is on the roadmap &mdash;
+      <a href="mailto:hello@thunderkitty.app">drop us a line</a>
+      to be notified when it lands.
+    </p>
+  </details>
+
+  <details>
+    <summary>Something else</summary>
+    <p>
+      Email
+      <a href="mailto:hello@thunderkitty.app">hello@thunderkitty.app</a>
+      . A human will reply.
+    </p>
+  </details>
+</div>
+
+{% endblock %}

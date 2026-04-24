@@ -1,0 +1,45 @@
+---
+title: Page not found
+description: This page wandered off.
+pageCss: error.css
+permalink: /404.html
+noindex: true
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<main class="error-page">
+  <div class="error-page__inner">
+    <img
+      class="error-page__cat"
+      src="/images/cat-sleeping.png"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <p class="error-page__kicker">404</p>
+    <h1 class="error-page__title">This page wandered off.</h1>
+    <p class="error-page__lede">
+      Maybe it's taking a nap. Maybe it was never there. Either way, it's not
+      here now.
+    </p>
+
+    <ul class="error-page__links">
+      <li><a href="/">Back to home</a></li>
+      <li><a href="/manifesto/">Read the manifesto</a></li>
+      <li>
+        <a href="mailto:hello@thunderkitty.app">
+          Email us if something's broken
+        </a>
+      </li>
+    </ul>
+
+    <p class="error-page__footnote">
+      If you followed a link from somewhere,
+      <a href="mailto:hello@thunderkitty.app">let us know</a>
+      where &mdash; we can't fix what we don't know is broken.
+    </p>
+  </div>
+</main>
+
+{% endblock %}

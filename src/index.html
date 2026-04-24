@@ -24,7 +24,7 @@ pageCss: home.css
         , for one flat price.
       </p>
       <div class="hero__ctas">
-        <a href="#download" class="btn btn--primary">Download for macOS</a>
+        <a href="/download/" class="btn btn--primary">Download for macOS</a>
         <a href="/manifesto" class="btn btn--ghost">Read the manifesto</a>
       </div>
       <p class="hero__meta">
@@ -762,24 +762,17 @@ pageCss: home.css
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <rect x="7" y="10" width="26" height="22" rx="2" />
-          <line x1="7" y1="16" x2="33" y2="16" />
-          <line x1="14" y1="7" x2="14" y2="13" />
-          <line x1="26" y1="7" x2="26" y2="13" />
-          <rect
-            x="17"
-            y="21"
-            width="6"
-            height="6"
-            rx="1"
-            fill="currentColor"
-            stroke="none"
-          />
+          <rect x="3" y="12" width="16" height="12" rx="2" />
+          <line x1="3" y1="16" x2="19" y2="16" />
+          <rect x="21" y="12" width="16" height="12" rx="2" />
+          <line x1="21" y1="16" x2="37" y2="16" />
+          <path d="M 17 30 Q 20 34 23 30" />
         </svg>
-        <h3 class="feature__title">Calendar-native.</h3>
+        <h3 class="feature__title">Works across your Macs.</h3>
         <p class="feature__desc">
-          Your meetings show up in Today. Notifications fire before they start.
-          Recording auto-stops when the meeting ends.
+          Your notes are real files on disk. Point Thunder Kitty at a Dropbox,
+          iCloud, or Google Drive folder and it syncs automatically. No account,
+          no login, no upcharge.
         </p>
       </div>
 
@@ -802,7 +795,8 @@ pageCss: home.css
         <h3 class="feature__title">Works anywhere.</h3>
         <p class="feature__desc">
           Zoom, Meet, Teams, Discord, FaceTime, phone calls &mdash; or no video
-          app at all. Just talk to yourself. Be weird.
+          app at all. Talk to yourself if you want. Thunder Kitty is invisible:
+          no bots, no plugins, no calendar invites.
         </p>
       </div>
     </div>
@@ -978,7 +972,7 @@ pageCss: home.css
         <li>All your notes as portable markdown files</li>
         <li>Cancel whenever. Your notes and transcripts stay yours.</li>
       </ul>
-      <a href="#download" class="btn btn--primary pricing__cta" id="download">
+      <a href="/download/" class="btn btn--primary pricing__cta">
         Start your 7-day trial
       </a>
       <p class="pricing__fineprint">
@@ -1106,10 +1100,10 @@ pageCss: home.css
       <div class="faq__answer">
         <p>
           Thunder Kitty requires macOS 26 (Tahoe) or later, on Apple Silicon. We
-          built on Apple's newest SpeechAnalyzer framework &mdash; the same one
-          used by Apple Intelligence &mdash; because it delivers the best
-          on-device transcription available. Support for macOS 14 and 15 is on
-          the roadmap.
+          built on Apple's newest SpeechAnalyzer API &mdash; the same one used
+          by Apple Intelligence &mdash; because it delivers the best on-device
+          transcription available. Support for macOS 14 and 15 is on the
+          roadmap.
         </p>
       </div>
     </details>

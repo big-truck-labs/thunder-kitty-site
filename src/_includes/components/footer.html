@@ -1,31 +1,22 @@
-<!-- FOOTER COMPONENT
-     Replace this file with your site footer markup.
-     Available data:
-       {{ client.name }}             — business name
-       {{ client.address.street }}   — street address
-       {{ client.address.city }}     — city
-       {{ client.address.state }}    — state
-       {{ client.address.zip }}      — zip code
-       {{ client.phone }}            — formatted phone number
-       {{ client.phoneTel }}         — phone digits only, for tel: href
-       {{ client.email }}            — contact email
-       {{ client.social.instagram }} — Instagram URL (empty string if not set)
-       {{ client.social.facebook }}  — Facebook URL
-       {{ client.social.tiktok }}    — TikTok URL
-       {{ client.social.pinterest }} — Pinterest URL
-       {{ client.social.youtube }}   — YouTube URL
-       {{ client.social.linkedin }}  — LinkedIn URL
-       {{ currentYear }}             — current year (for copyright)
-     Example:
-  <footer>
-    <p>
-      {{ client.address.street }}, {{ client.address.city }},
-      {{ client.address.state }} {{ client.address.zip }}
+<footer class="site-footer">
+  <div class="container">
+    <img
+      class="site-footer__cat"
+      src="/images/cat-sleeping-ball.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <p class="site-footer__slogan">No bots. No bosses. No clouds.</p>
+    <p class="site-footer__built">Built by hand at Big Truck Labs.</p>
+    <nav class="site-footer__links">
+      <a href="/manifesto">Manifesto</a>
+      <a href="/changelog">Changelog</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <p class="site-footer__copy">
+      &copy; 2026 Big Truck Labs. Thunder Kitty is a local-first thing.
     </p>
-    <p>
-      <a href="tel:{{ client.phoneTel }}">{{ client.phone }}</a> &bull;
-      <a href="mailto:{{ client.email }}">{{ client.email }}</a>
-    </p>
-    <p>&copy; {{ currentYear }} {{ client.name }}</p>
-  </footer>
--->
+  </div>
+</footer>

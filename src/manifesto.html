@@ -1,8 +1,72 @@
 ---
-title: Manifesto
-description: The Thunder Kitty manifesto.
+title: The manifesto
+description: Why we built Thunder Kitty. What we won't do. Who this is for.
+pageCss: manifesto.css
 ---
 
 {% extends "layouts/base.html" %} {% block body %}
-<h1>Manifesto</h1>
+
+<article class="manifesto">
+  <div class="container container--prose">
+    <header class="manifesto__header">
+      <p class="eyebrow">The manifesto</p>
+      <img
+        src="/images/cat-reading-seated.png"
+        alt=""
+        aria-hidden="true"
+        class="manifesto__cat"
+      />
+      <h1 class="manifesto__title">
+        We built Thunder Kitty because
+        <em>meeting tools got weird.</em>
+      </h1>
+    </header>
+
+    <div class="manifesto__body">
+      <p>
+        Not weird like us. Weird like: we'll be uploading your most sensitive
+        conversations to servers in Virginia, summarizing them with models
+        trained on who-knows-what, selling you back your own notes in a
+        dashboard, and raising $200M to keep doing it.
+      </p>
+
+      <p>
+        Thunder Kitty is the opposite of that. It runs on your Mac. Your audio
+        stays on your Mac. Your notes are markdown files in a folder you can
+        open, read, move, back up, or delete yourself. There is no server. There
+        is no team. There is no workspace. There is no
+        <em>we</em>
+        in
+        <em>your data.</em>
+      </p>
+
+      <p class="manifesto__statement">
+        It's a notepad. It listens. It writes things down. That's it.
+      </p>
+
+      <p>
+        It's for therapists whose work can't go to the cloud. Founders running
+        their business out of plain text. Freelancers who just want to remember
+        what they said on the call. Weirdos who think a meeting tool should have
+        a cat on it.
+      </p>
+
+      <p>
+        It's not for enterprise teams who need "shareable links." It's not for
+        VCs looking for a horizontal productivity play. It's not for anyone who
+        needs a Zapier integration with Monday.com.
+      </p>
+
+      <p>
+        If you get it, you get it. If you don't, Granola is great. We promise.
+      </p>
+    </div>
+
+    <footer class="manifesto__footer">
+      <p>&mdash; Thunder Kitty, Big Truck Labs</p>
+      <a href="/" class="manifesto__back">&larr; Back home</a>
+    </footer>
+  </div>
+</article>
+
 {% endblock %}

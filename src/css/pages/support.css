@@ -1,0 +1,35 @@
+.support {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-md);
+}
+
+.support__title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--color-ink);
+  margin-bottom: var(--space-lg);
+}
+
+.support__lede {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-md);
+}
+
+.support__note {
+  font-size: 1rem;
+  color: var(--color-ink-faded);
+}
+
+.support a {
+  color: var(--color-rose);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-rose);
+}
+
+.support a:hover {
+  color: var(--color-coral);
+  border-bottom-color: var(--color-coral);
+}

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Thunder Kitty — manifesto.css
+   The manifesto page gets its own visual identity — pinker, warmer, more
+   zine-like than the homepage. It's the belief-statement page.
+   ========================================================================== */
+
+body {
+  background: var(--color-rose-soft);
+}
+
+.manifesto {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+/* Header ------------------------------------------------------------------ */
+.manifesto__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.manifesto__cat {
+  width: 200px;
+  margin: 1.5rem auto;
+  transform: rotate(-3deg);
+  filter: drop-shadow(0 12px 28px rgba(26, 26, 26, 0.12));
+}
+
+.manifesto__title {
+  font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+  line-height: 1.1;
+  margin: 0 auto;
+  max-width: 20ch;
+  letter-spacing: -0.015em;
+}
+.manifesto__title em {
+  font-style: italic;
+  color: var(--color-ink);
+  background: linear-gradient(to top, var(--color-paper) 35%, transparent 35%);
+  padding: 0 0.1em;
+}
+
+/* Body -------------------------------------------------------------------- */
+.manifesto__body {
+  background: var(--color-paper);
+  padding: var(--space-lg) clamp(1.5rem, 5vw, 3rem);
+  border-radius: 6px;
+  box-shadow: 0 24px 60px -16px rgba(26, 26, 26, 0.14);
+  transform: rotate(-0.2deg);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+.manifesto__body p {
+  margin-bottom: 1.4em;
+}
+.manifesto__body p em {
+  font-style: italic;
+  color: var(--color-rose);
+}
+
+/* The big beat — "It's a notepad. It listens. That's it." */
+.manifesto__statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.3;
+  font-style: italic;
+  color: var(--color-ink);
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px dashed var(--color-rose);
+  border-bottom: 1px dashed var(--color-rose);
+  margin: 2.5rem 0;
+}
+
+.manifesto__closer {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  margin-top: 2.5rem;
+}
+
+/* Footer ------------------------------------------------------------------ */
+.manifesto__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-lg);
+  padding: 0 1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-ink-soft);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.manifesto__back {
+  text-decoration: none;
+  color: var(--color-ink);
+  border-bottom: 1.5px solid var(--color-rose);
+  padding-bottom: 2px;
+  font-size: 0.95rem;
+}
+.manifesto__back:hover {
+  color: var(--color-rose);
+  border-color: var(--color-ink);
+}

@@ -1,10 +1,1130 @@
 ---
-title: Home
-description: Thunder Kitty — local-first meeting transcription for macOS.
+title: A notepad that listens
+description: Local-first meeting transcription for macOS. Your audio, your Mac, your files. $10/month, 7-day trial, no credit card.
 ogImage: /images/og-home.jpg
+pageCss: home.css
 ---
 
 {% extends "layouts/base.html" %} {% block body %}
-<h1>Thunder Kitty</h1>
-<p>Local-first meeting transcription for macOS.</p>
+
+<!-- =====================================================================
+     HERO
+     ===================================================================== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="eyebrow eyebrow--italic">Meeting tools for weirdos.</p>
+      <h1 class="hero__title">
+        A notepad
+        <em>that listens.</em>
+      </h1>
+      <p class="hero__sub">
+        Record meetings on your Mac. Nothing leaves your Mac.
+        <em>As many as you want, as long as you want</em>
+        , for one flat price.
+      </p>
+      <div class="hero__ctas">
+        <a href="#download" class="btn btn--primary">Download for macOS</a>
+        <a href="/manifesto" class="btn btn--ghost">Read the manifesto</a>
+      </div>
+      <p class="hero__meta">
+        $10/mo &middot; 7-day trial &middot; No credit card &middot; macOS 14+
+      </p>
+    </div>
+    <div class="hero__art">
+      <img
+        src="/images/cat-typewriter.png"
+        alt="A paper-cutout cat in a cape working at a typewriter."
+        class="hero__cat"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     HOW IT WORKS — two-stage demo with faux app UI
+     ===================================================================== -->
+<section class="acts" id="how-it-works">
+  <div class="container">
+    <p class="eyebrow">How it works</p>
+    <h2 class="acts__heading">
+      Two things it does.
+      <em>Simply.</em>
+    </h2>
+
+    <!-- ===== STAGE 1: THE NOTEPAD ===== -->
+    <div class="stage">
+      <div class="stage__intro">
+        <p class="stage__label">Stage 1</p>
+        <h3 class="stage__title">The Notepad.</h3>
+        <p class="stage__desc">
+          Open Thunder Kitty. Start a note. Type. Think. Make a list. Everything
+          you write is a plain markdown file in a folder on your Mac.
+        </p>
+      </div>
+
+      <div class="stage__mockup-wrap">
+        <div
+          class="mockup-window relative border border-line bg-paper-deep shadow-2xl mx-auto max-w-full md:max-w-3xl"
+        >
+          <div
+            class="flex items-center gap-1.5 px-3.5 py-2 border-b border-line"
+          >
+            <span class="w-3 h-3 rounded-full bg-[#ff5f57] inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-[#febc2e] inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28c840] inline-block"></span>
+          </div>
+          <div class="flex min-h-[280px] md:min-h-[460px]">
+            <!-- Sidebar -->
+            <div
+              class="hidden md:flex flex-col w-48 bg-cardstock/40 border-r border-line text-sm"
+            >
+              <!-- Search field -->
+              <div class="px-3 pt-3 pb-2">
+                <div
+                  class="flex items-center gap-2 bg-paper border border-line rounded-md px-2.5 py-1.5"
+                >
+                  <svg
+                    class="w-3.5 h-3.5 text-ink-faded"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                  <span class="text-xs text-ink-faded">Search</span>
+                </div>
+              </div>
+
+              <!-- Section header -->
+              <div
+                class="px-4 pt-2 pb-1 text-[10px] uppercase tracking-widest text-ink-faded font-medium"
+              >
+                Notes
+              </div>
+
+              <!-- Note list -->
+              <div class="flex-1 overflow-hidden">
+                <div class="px-3 py-2 bg-rose-soft/40 border-l-2 border-rose">
+                  <div class="flex items-center gap-1.5">
+                    <svg
+                      class="w-3 h-3 text-rose flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-3-5 3V4z" />
+                    </svg>
+                    <div class="font-medium text-ink truncate">
+                      Therapy session
+                    </div>
+                  </div>
+                  <div class="text-[11px] text-ink-faded mt-0.5 ml-4">
+                    Tuesday, 4:00 PM
+                  </div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Brainstorm w/ self
+                  </div>
+                  <div class="text-[11px] text-ink-faded mt-0.5">Yesterday</div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Quarterly board call
+                  </div>
+                  <div class="text-[11px] text-ink-faded mt-0.5">Mar 28</div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Coffee w/ Maya
+                  </div>
+                  <div class="text-[11px] text-ink-faded mt-0.5">Mar 27</div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Reading notes
+                  </div>
+                  <div class="text-[11px] text-ink-faded mt-0.5">Mar 25</div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Dr. K — followup
+                  </div>
+                  <div class="text-[11px] text-ink-faded mt-0.5">Mar 22</div>
+                </div>
+              </div>
+
+              <!-- Sidebar footer -->
+              <div
+                class="mt-auto px-3 py-2 border-t border-line flex items-center justify-between"
+              >
+                <span class="text-[11px] text-ink-faded">23 notes</span>
+                <svg
+                  class="w-4 h-4 text-ink-faded"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Main content area -->
+            <div class="flex-1 flex flex-col bg-paper">
+              <!-- Toolbar -->
+              <div
+                class="flex items-center justify-between px-3 md:px-5 py-2.5 border-b border-line"
+              >
+                <div class="flex items-center gap-3">
+                  <svg
+                    class="w-4 h-4 text-ink-faded"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7"
+                    />
+                  </svg>
+                  <span class="text-xs text-ink-faded">Therapy session</span>
+                </div>
+                <button
+                  class="inline-flex items-center gap-1.5 bg-rose text-paper rounded-full px-3 py-1.5 text-xs font-medium"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-paper"></span>
+                  Start recording
+                </button>
+              </div>
+              <!-- Note body -->
+              <div class="flex-1 px-3 py-3 md:px-6 md:py-5 font-sans text-ink">
+                <h4 class="font-display text-2xl mb-2">Therapy session</h4>
+                <div class="text-xs text-ink-faded mb-5">
+                  Tuesday, April 21, 2026
+                </div>
+                <p class="text-sm mb-3 leading-relaxed text-ink-soft">
+                  Things to follow up on this week:
+                </p>
+                <ul class="text-sm space-y-2 leading-relaxed text-ink-soft">
+                  <li class="flex gap-2">
+                    <span class="text-rose">—</span>
+                    <span>
+                      The pattern Dr. K mentioned about Sunday afternoons
+                    </span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-rose">—</span>
+                    <span>
+                      Try the breathing exercise before the next board call
+                    </span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-rose">—</span>
+                    <span>Reach out to M. about the article he sent</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-rose">—</span>
+                    <span>Re-read the chapter on attention residue</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Bottom status bar -->
+              <div
+                class="mt-auto flex items-center justify-between px-3 md:px-5 py-2 border-t border-line bg-paper-deep/50"
+              >
+                <div class="flex items-center gap-3 text-[11px] text-ink-faded">
+                  <span class="font-mono">therapy-session.md</span>
+                  <span>·</span>
+                  <span>76 words</span>
+                  <span>·</span>
+                  <span>saved</span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-ink-faded">
+                  <svg
+                    class="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>On-device</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STAGE 2: THE TRANSCRIPT ===== -->
+    <div class="stage">
+      <div class="stage__intro">
+        <p class="stage__label">Stage 2</p>
+        <h3 class="stage__title">The Transcript.</h3>
+        <p class="stage__desc">
+          Thunder Kitty captures both sides of the call, transcribes everything
+          on your Mac, and labels who's speaking &mdash; including you.
+        </p>
+      </div>
+
+      <div class="stage__mockup-wrap">
+        <div
+          class="mockup-window relative border border-line bg-paper-deep shadow-2xl mx-auto max-w-full md:max-w-3xl"
+        >
+          <div
+            class="flex items-center gap-1.5 px-3.5 py-2 border-b border-line"
+          >
+            <span class="w-3 h-3 rounded-full bg-[#ff5f57] inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-[#febc2e] inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28c840] inline-block"></span>
+          </div>
+          <div class="flex min-h-[320px] md:min-h-[500px]">
+            <!-- Sidebar -->
+            <div
+              class="hidden md:flex flex-col w-48 bg-cardstock/40 border-r border-line text-sm"
+            >
+              <div class="px-3 pt-3 pb-2">
+                <div
+                  class="flex items-center gap-2 bg-paper border border-line rounded-md px-2.5 py-1.5"
+                >
+                  <svg
+                    class="w-3.5 h-3.5 text-ink-faded"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                  <span class="text-xs text-ink-faded">Search</span>
+                </div>
+              </div>
+              <div
+                class="px-4 pt-2 pb-1 text-[10px] uppercase tracking-widest text-ink-faded font-medium"
+              >
+                Today
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <div class="px-3 py-2 bg-rose-soft/40 border-l-2 border-rose">
+                  <div class="font-medium text-ink truncate">
+                    Coffee w/ Maya
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-[11px] text-ink-faded mt-0.5"
+                  >
+                    <span>10:00 – 10:30</span>
+                    <span class="flex items-center gap-0.5">
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                      2
+                    </span>
+                  </div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Quarterly board call
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-[11px] text-ink-faded mt-0.5"
+                  >
+                    <span>11:00 – 12:00</span>
+                    <span class="flex items-center gap-0.5">
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                      5
+                    </span>
+                  </div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Design review
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-[11px] text-ink-faded mt-0.5"
+                  >
+                    <span>1:00 – 1:30</span>
+                    <span class="flex items-center gap-0.5">
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                      3
+                    </span>
+                  </div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="font-medium text-ink-soft truncate">
+                    Therapy session
+                  </div>
+                  <div
+                    class="flex items-center gap-2 text-[11px] text-ink-faded mt-0.5"
+                  >
+                    <span>4:00 – 5:00</span>
+                    <span class="flex items-center gap-0.5">
+                      <svg
+                        class="w-3 h-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                      2
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-auto px-3 py-2 border-t border-line">
+                <span class="text-[11px] text-ink-faded">4 meetings</span>
+              </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="flex-1 flex flex-col bg-paper">
+              <!-- Header -->
+              <div
+                class="px-3 pt-3 pb-2 md:px-5 md:pt-4 md:pb-3 border-b border-line"
+              >
+                <h4 class="font-display text-xl text-ink mb-1">
+                  Coffee w/ Maya
+                </h4>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="text-[11px] text-ink-faded">
+                    April 23, 2026 · 10:00 AM
+                  </span>
+                  <span class="text-ink-faded">·</span>
+                  <span
+                    class="inline-flex items-center gap-1 text-[11px] text-ink-faded"
+                  >
+                    <svg
+                      class="w-3 h-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg>
+                    2
+                  </span>
+                  <span class="text-ink-faded">·</span>
+                  <span
+                    class="inline-flex items-center gap-1 text-[10px] bg-cardstock text-ink-soft px-1.5 py-0.5 rounded font-medium"
+                  >
+                    Maya Baylor · Redwood Partners
+                  </span>
+                  <span
+                    class="ml-1 inline-flex items-center gap-1 text-[10px] bg-rose-soft/50 text-rose px-1.5 py-0.5 rounded font-medium"
+                  >
+                    <span class="w-1 h-1 rounded-full bg-rose"></span>
+                    Local
+                  </span>
+                </div>
+              </div>
+              <!-- Recording bar -->
+              <div
+                class="flex items-center justify-between px-3 md:px-5 py-1.5 border-b border-line bg-paper-deep/30"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="rec-dot"></span>
+                  <span class="text-[11px] font-medium text-rose">
+                    Recording
+                  </span>
+                  <span class="text-[11px] font-mono text-ink-faded">
+                    24:18
+                  </span>
+                </div>
+                <div class="flex items-center gap-3 text-ink-faded">
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                  </svg>
+                  <svg
+                    class="w-3.5 h-3.5 text-rose"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M6 6h12v12H6z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Transcript -->
+              <div
+                class="flex-1 px-3 py-3 md:px-5 md:py-4 overflow-y-auto space-y-4 text-sm"
+              >
+                <div class="flex gap-3">
+                  <div
+                    class="w-0.5 bg-rose/40 rounded-full flex-shrink-0"
+                  ></div>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="text-[11px] font-medium px-1.5 py-0.5 rounded bg-rose/20 text-rose"
+                      >
+                        You
+                      </span>
+                      <span class="text-[11px] text-ink-faded font-mono">
+                        10:00:08
+                      </span>
+                    </div>
+                    <p class="text-ink-soft leading-relaxed">
+                      Thanks for making the time. I wanted to talk through the
+                      consulting thing before I commit either way.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div
+                    class="w-0.5 bg-slate/40 rounded-full flex-shrink-0"
+                  ></div>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="text-[11px] font-medium px-1.5 py-0.5 rounded bg-slate/20 text-slate"
+                      >
+                        Maya
+                      </span>
+                      <span class="text-[11px] text-ink-faded font-mono">
+                        10:00:24
+                      </span>
+                    </div>
+                    <p class="text-ink-soft leading-relaxed">
+                      Of course. What's pulling you toward it, and what's
+                      pulling you away?
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div
+                    class="w-0.5 bg-rose/40 rounded-full flex-shrink-0"
+                  ></div>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="text-[11px] font-medium px-1.5 py-0.5 rounded bg-rose/20 text-rose"
+                      >
+                        You
+                      </span>
+                      <span class="text-[11px] text-ink-faded font-mono">
+                        10:00:41
+                      </span>
+                    </div>
+                    <p class="text-ink-soft leading-relaxed">
+                      The work itself is great. The flexibility is great. But
+                      the contract is structured in a way that makes me nervous.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div
+                    class="w-0.5 bg-slate/40 rounded-full flex-shrink-0"
+                  ></div>
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="text-[11px] font-medium px-1.5 py-0.5 rounded bg-slate/20 text-slate"
+                      >
+                        Maya
+                      </span>
+                      <span class="text-[11px] text-ink-faded font-mono">
+                        10:01:02
+                      </span>
+                    </div>
+                    <p class="text-ink-soft leading-relaxed">
+                      Tell me about the structure. Specifically what worries
+                      you?
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom metadata bar -->
+              <div
+                class="mt-auto flex items-center justify-between px-3 md:px-5 py-2 border-t border-line bg-paper-deep/50"
+              >
+                <span class="font-mono text-[11px] text-ink-faded">
+                  ~/Documents/Thunder Kitty Notes/coffee-w-maya.md
+                </span>
+                <div
+                  class="flex items-center gap-1.5 text-[11px] text-ink-faded"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Saved to disk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     WHY IT WORKS
+     ===================================================================== -->
+<section class="features">
+  <div class="container">
+    <p class="eyebrow">Why it actually works</p>
+    <h2 class="features__heading">
+      The good stuff,
+      <em>up close.</em>
+    </h2>
+
+    <div class="features__grid">
+      <div class="feature feature--highlight">
+        <svg
+          class="feature__icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M 20 4 L 8 22 L 18 22 L 14 36 L 32 16 L 22 16 L 26 4 Z" />
+        </svg>
+        <h3 class="feature__title">Record everything.</h3>
+        <p class="feature__desc">
+          No meeting cap. No minute meter. No "you've used 80% of your plan"
+          emails. Record all day, every day. The cost to us is zero, so the cost
+          to you is zero.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg
+          class="feature__icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="5" y="9" width="30" height="20" rx="2" />
+          <line x1="3" y1="32" x2="37" y2="32" />
+          <path d="M 14 19 L 17 22 L 26 14" />
+        </svg>
+        <h3 class="feature__title">All on your Mac.</h3>
+        <p class="feature__desc">
+          Apple's built-in SpeechAnalyzer runs natively. Fast, accurate, and
+          your audio doesn't go anywhere it shouldn't.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg
+          class="feature__icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="13" cy="15" r="4" />
+          <path d="M 6 28 Q 13 22 20 28" />
+          <circle cx="27" cy="20" r="4" />
+          <path d="M 20 33 Q 27 27 34 33" />
+        </svg>
+        <h3 class="feature__title">Knows who's talking.</h3>
+        <p class="feature__desc">
+          Speaker diarization plus voice fingerprinting &mdash; transcripts
+          label everyone in the meeting automatically, and Kitty always knows
+          when it's you.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg
+          class="feature__icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="20" cy="13" r="3.5" />
+          <circle cx="10" cy="28" r="3.5" />
+          <circle cx="30" cy="28" r="3.5" />
+          <line x1="18" y1="16" x2="12" y2="25" />
+          <line x1="22" y1="16" x2="28" y2="25" />
+        </svg>
+        <h3 class="feature__title">Choose your brain.</h3>
+        <p class="feature__desc">
+          On-device summaries via Apple Intelligence or local Llama. Or bring
+          your own Claude, OpenAI, or Gemini key.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg
+          class="feature__icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="7" y="10" width="26" height="22" rx="2" />
+          <line x1="7" y1="16" x2="33" y2="16" />
+          <line x1="14" y1="7" x2="14" y2="13" />
+          <line x1="26" y1="7" x2="26" y2="13" />
+          <rect
+            x="17"
+            y="21"
+            width="6"
+            height="6"
+            rx="1"
+            fill="currentColor"
+            stroke="none"
+          />
+        </svg>
+        <h3 class="feature__title">Calendar-native.</h3>
+        <p class="feature__desc">
+          Your meetings show up in Today. Notifications fire before they start.
+          Recording auto-stops when the meeting ends.
+        </p>
+      </div>
+
+      <div class="feature">
+        <svg
+          class="feature__icon"
+          viewBox="0 0 40 40"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="16" y="7" width="8" height="16" rx="4" />
+          <path d="M 12 19 Q 12 27 20 27 Q 28 27 28 19" />
+          <line x1="20" y1="27" x2="20" y2="33" />
+          <line x1="14" y1="33" x2="26" y2="33" />
+        </svg>
+        <h3 class="feature__title">Works anywhere.</h3>
+        <p class="feature__desc">
+          Zoom, Meet, Teams, Discord, FaceTime, phone calls &mdash; or no video
+          app at all. Just talk to yourself. Be weird.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     MANIFESTO TEASER
+     ===================================================================== -->
+<section class="manifesto-teaser">
+  <div class="container container--content">
+    <p class="eyebrow">The short version</p>
+    <blockquote class="manifesto-teaser__quote">
+      <p>We built Thunder Kitty because meeting tools got weird.</p>
+      <p>
+        Not weird like us. Weird like:
+        <em>
+          we'll be uploading your most sensitive conversations to servers in
+          Virginia, summarizing them with models trained on who-knows-what,
+          selling you back your own notes in a dashboard, and raising $200M to
+          keep doing it.
+        </em>
+      </p>
+      <p>Thunder Kitty is the opposite of that.</p>
+    </blockquote>
+    <a href="/manifesto" class="manifesto-teaser__link">
+      Read the whole thing &rarr;
+    </a>
+  </div>
+</section>
+
+<!-- =====================================================================
+     IS THUNDER KITTY FOR YOU?
+     ===================================================================== -->
+<section class="fit">
+  <div class="container">
+    <div class="fit__header">
+      <h2 class="fit__heading">
+        Is Thunder Kitty
+        <em>for you?</em>
+      </h2>
+      <img
+        src="/images/cat-jumping.png"
+        alt=""
+        aria-hidden="true"
+        class="fit__cat"
+      />
+    </div>
+
+    <div class="fit__grid">
+      <div class="fit__col fit__col--yes">
+        <h3 class="fit__col-title">Probably yes, if&hellip;</h3>
+        <ul class="fit__list">
+          <li>
+            You run meetings with clients, patients, or sources whose trust you
+            can't afford to break.
+          </li>
+          <li>
+            You already live in plain text. Obsidian, iA Writer, Bear, the
+            terminal.
+          </li>
+          <li>
+            You've started counting how many of your conversations are sitting
+            on someone else's server.
+          </li>
+          <li>You like software that has a point of view.</li>
+        </ul>
+      </div>
+
+      <div class="fit__col fit__col--no">
+        <h3 class="fit__col-title">Probably no, if&hellip;</h3>
+        <ul class="fit__list">
+          <li>
+            You need shareable summaries distributed to your team's Slack.
+          </li>
+          <li>You need to invite a bot to your Zoom calls.</li>
+          <li>You want integrations with Notion, Asana, Monday, and Zapier.</li>
+          <li>You prefer your software to be serious.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="fit__closer">
+      If you get it, you get it. If you don't, Granola is great. We promise.
+    </p>
+  </div>
+</section>
+
+<!-- =====================================================================
+     PRIVACY — HOW IT ACTUALLY WORKS
+     ===================================================================== -->
+<section class="privacy">
+  <div class="container container--content">
+    <p class="eyebrow">Privacy, for real</p>
+    <h2 class="privacy__heading">
+      No bots.
+      <em>No bosses.</em>
+      No clouds.
+    </h2>
+
+    <p class="privacy__lede">
+      Most "privacy-first" apps want you to trust them. We'd rather show you.
+    </p>
+
+    <div class="privacy__block">
+      <h3 class="privacy__subhead">Your notes live here:</h3>
+      <code class="privacy__path">~/Documents/Thunder Kitty Notes/</code>
+      <p class="privacy__note">
+        Plain
+        <code>.md</code>
+        files in a folder you control. Open them with any editor. Back them up
+        to anywhere. Delete them. Move them. They're files.
+      </p>
+    </div>
+
+    <div class="privacy__block">
+      <h3 class="privacy__subhead">
+        The only times Thunder Kitty talks to the internet:
+      </h3>
+      <ul class="privacy__list">
+        <li>Checking for app updates (once a day, no data attached)</li>
+        <li>Validating your license (your key, nothing else)</li>
+        <li>Calls to your own API key &mdash; only if you turn that on</li>
+      </ul>
+      <p class="privacy__note">
+        That's the whole list. Your audio never touches the network. Your
+        transcripts never touch the network. Your notes never touch the network.
+      </p>
+    </div>
+
+    <div class="privacy__verify">
+      <img
+        src="/images/cat-sleeping.png"
+        alt=""
+        aria-hidden="true"
+        class="privacy__cat"
+      />
+      <div>
+        <h3 class="privacy__subhead">Don't believe us.</h3>
+        <p>
+          Turn on Airplane mode. Record a meeting. Read the transcript. The app
+          works. That's the proof.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     PRICING
+     ===================================================================== -->
+<section class="pricing" id="pricing">
+  <div class="container container--content">
+    <p class="eyebrow">Pricing</p>
+    <h2 class="pricing__heading">
+      One price.
+      <em>No tiers.</em>
+    </h2>
+
+    <div class="pricing__card">
+      <div class="pricing__price">
+        <span class="pricing__dollar">$</span>
+        <span class="pricing__amount">10</span>
+        <span class="pricing__unit">/ month</span>
+      </div>
+      <ul class="pricing__features">
+        <li>
+          <strong>Unlimited</strong>
+          meeting recordings &mdash; no caps, ever
+        </li>
+        <li>On-device transcription with speaker labels</li>
+        <li>On-device summaries (or bring your own API key)</li>
+        <li>All your notes as portable markdown files</li>
+        <li>Cancel whenever. Your notes and transcripts stay yours.</li>
+      </ul>
+      <a href="#download" class="btn btn--primary pricing__cta" id="download">
+        Start your 7-day trial
+      </a>
+      <p class="pricing__fineprint">
+        No credit card. No account. Just a download.
+        <br />
+        macOS 14 Sonoma or later. Apple Silicon.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     FAQ
+     ===================================================================== -->
+<section class="faq">
+  <div class="container container--content">
+    <p class="eyebrow">Questions you probably have</p>
+    <h2 class="faq__heading">
+      The skeptic's
+      <em>FAQ.</em>
+    </h2>
+
+    <details class="faq__item">
+      <summary>Does my audio really never leave my Mac?</summary>
+      <div class="faq__answer">
+        <p>
+          Really. Transcription runs on-device via Apple's built-in speech
+          recognition. Summaries run on-device too, unless you explicitly turn
+          on a cloud model and provide your own API key. Airplane mode is the
+          proof &mdash; the core app works with the internet off.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>Why subscription instead of one-time?</summary>
+      <div class="faq__answer">
+        <p>
+          Because Thunder Kitty is maintained by one person and I'd like to keep
+          the lights on while I keep making it better. $10/mo is roughly one
+          coffee, and it pays for the macOS versions I have to rebuild every
+          year, the Apple developer fee, and the time to answer your support
+          emails personally.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>What happens if I record a 6-hour meeting?</summary>
+      <div class="faq__answer">
+        <p>
+          It records a 6-hour meeting. There's no time limit, no meeting cap, no
+          "you've used 80% of your plan" warning. Because everything runs on
+          your Mac, the cost to us of you transcribing more is zero, so we don't
+          charge you for it. Record a 12-hour conference. Record every meeting
+          in your day. Record yourself talking to your dog. We don't care.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>Do I need to invite a bot to my Zoom calls?</summary>
+      <div class="faq__answer">
+        <p>
+          No. Thunder Kitty listens to your mic and your system audio, the same
+          way QuickTime does. No bot. No meeting link. No one on the other side
+          gets a "Thunder Kitty has joined" notification.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>
+        Can I use this for therapy sessions / client intakes / journalism?
+      </summary>
+      <div class="faq__answer">
+        <p>
+          That's the point. Because nothing leaves your Mac, Thunder Kitty works
+          in contexts where sending audio to a third-party cloud service would
+          be inappropriate or prohibited. We don't make HIPAA claims because
+          HIPAA compliance is about your workflow, not our app &mdash; but the
+          data-handling model is designed for exactly these use cases.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>What about summaries? Don't those need the cloud?</summary>
+      <div class="faq__answer">
+        <p>
+          They don't. Thunder Kitty ships with on-device summary options using
+          Apple Intelligence or locally-downloaded Llama models. If you want
+          smarter summaries, you can plug in your own Claude, OpenAI, or Gemini
+          API key &mdash; but that's your choice and your bill, not ours.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>Can I export my notes?</summary>
+      <div class="faq__answer">
+        <p>
+          Your notes and transcripts are already exported. They're sitting in
+          <code>~/Documents/Thunder Kitty Notes/</code>
+          as markdown files, right now. There is nothing to export because there
+          is nothing locked in.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>What if Thunder Kitty goes away?</summary>
+      <div class="faq__answer">
+        <p>
+          Your notes and transcripts are still markdown files on your disk. Open
+          them in Obsidian, iA Writer, a text editor, Notion, or VS Code. You
+          lose the recording and transcription functionality. You don't lose
+          your writing or transcripts. That's the whole design.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>Why macOS only?</summary>
+      <div class="faq__answer">
+        <p>
+          Because I'm one person and macOS is where I can do the best version of
+          this. Apple Silicon's on-device speech recognition and local model
+          support are what make the all-local promise possible. A Windows or
+          Linux version isn't ruled out forever &mdash; it's just not now.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>Who made this?</summary>
+      <div class="faq__answer">
+        <p>
+          Thunder Kitty is made by one person at
+          <a href="https://github.com/big-truck-labs">Big Truck Labs</a>
+          . No VC, no team, no roadmap committee. If something's broken, you're
+          emailing me directly. If something's great, same.
+        </p>
+      </div>
+    </details>
+  </div>
+</section>
+
 {% endblock %}

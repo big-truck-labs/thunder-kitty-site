@@ -1,0 +1,682 @@
+/* ==========================================================================
+   Thunder Kitty — home.css
+   Homepage-specific styles. Seven sections, one big scroll.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Section rhythm
+   -------------------------------------------------------------------------- */
+section {
+  padding: var(--space-2xl) 0;
+}
+section + section {
+  padding-top: var(--space-xl);
+}
+
+/* Italic emphasis inside headlines — the editorial "surprise" moment */
+h1 em,
+h2 em,
+h3 em {
+  font-style: italic;
+  color: var(--color-rose);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   HERO
+   -------------------------------------------------------------------------- */
+.hero {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1.15fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.hero__title {
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__sub {
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+  max-width: 32ch;
+  margin-bottom: 2rem;
+}
+
+.hero__sub em {
+  font-style: italic;
+  color: var(--color-ink);
+  background: linear-gradient(
+    to top,
+    var(--color-rose-soft) 30%,
+    transparent 30%
+  );
+  padding: 0 0.1em;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__meta {
+  font-size: 0.88rem;
+  color: var(--color-ink-faded);
+  margin: 0;
+}
+
+.hero__art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__cat {
+  width: 100%;
+  transform: rotate(-2deg);
+  filter: drop-shadow(0 16px 32px rgba(26, 26, 26, 0.08));
+  animation: float 8s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1deg) translateY(-8px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HOW IT WORKS — two-stage demo with DaisyUI mockup-window
+   -------------------------------------------------------------------------- */
+.acts {
+  background: var(--color-paper-deep);
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+.acts__heading {
+  max-width: 22ch;
+  margin-bottom: var(--space-xl);
+}
+
+.stage {
+  margin-bottom: var(--space-xl);
+}
+.stage:last-child {
+  margin-bottom: 0;
+}
+
+.stage__intro {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto var(--space-lg);
+  padding: 0 1rem;
+}
+
+.stage__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-rose);
+  margin: 0 0 0.75rem;
+}
+
+.stage__title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 1rem;
+}
+
+.stage__desc {
+  color: var(--color-ink-soft);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+/* Wrapper that holds the mockup + floating annotations */
+.stage__mockup-wrap {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+
+/* DaisyUI's mockup-window is opinionated; tone it down to match our brand.
+   The DaisyUI defaults give us the macOS chrome with traffic lights for free. */
+.stage__mockup-wrap .mockup-window {
+  padding-top: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.04),
+    0 8px 20px -4px rgba(26, 26, 26, 0.1),
+    0 32px 64px -16px rgba(208, 107, 126, 0.2);
+  transform: rotate(-0.6deg);
+  transition: transform 400ms var(--ease);
+}
+.stage:nth-child(odd) .stage__mockup-wrap .mockup-window {
+  transform: rotate(-0.6deg);
+}
+.stage:nth-child(even) .stage__mockup-wrap .mockup-window {
+  transform: rotate(0.6deg);
+}
+.stage__mockup-wrap:hover .mockup-window {
+  transform: rotate(0deg);
+}
+
+/* DaisyUI's mockup-window renders its own gray dots via ::before.
+   Hide them so our colored dots can show. */
+.stage__mockup-wrap .mockup-window::before {
+  display: none;
+}
+
+@keyframes rec-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.rec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-rose);
+  animation: rec-pulse 1.5s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   WHY IT WORKS — features grid
+   -------------------------------------------------------------------------- */
+.features {
+  background: var(--color-paper);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.features__heading {
+  max-width: 18ch;
+  margin-bottom: var(--space-xl);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+@media (min-width: 700px) {
+  .features__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md) var(--space-lg);
+  }
+}
+@media (min-width: 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+.feature {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.feature--highlight {
+  border-top: 2px solid var(--color-rose);
+  position: relative;
+}
+.feature--highlight::before {
+  content: "\2605";
+  position: absolute;
+  top: -0.85rem;
+  left: 0;
+  background: var(--color-paper);
+  color: var(--color-rose);
+  padding: 0 0.5rem 0 0;
+  font-size: 1.1rem;
+}
+.feature--highlight .feature__title {
+  color: var(--color-ink);
+}
+.feature--highlight .feature__desc strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.feature__icon {
+  width: 36px;
+  height: 36px;
+  color: var(--color-rose);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature__title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-ink);
+}
+
+.feature__desc {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  max-width: 38ch;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   MANIFESTO TEASER
+   -------------------------------------------------------------------------- */
+.manifesto-teaser {
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+
+.manifesto-teaser__quote {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  line-height: 1.35;
+  color: var(--color-ink);
+}
+.manifesto-teaser__quote p {
+  margin-bottom: 1em;
+}
+.manifesto-teaser__quote p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+  color: var(--color-rose);
+}
+
+.manifesto-teaser__link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--color-rose);
+  padding-bottom: 2px;
+}
+.manifesto-teaser__link:hover {
+  color: var(--color-rose);
+  border-color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   IS THUNDER KITTY FOR YOU?
+   -------------------------------------------------------------------------- */
+.fit {
+  background: var(--color-rose-soft);
+  position: relative;
+}
+
+.fit__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.fit__heading {
+  max-width: 16ch;
+  margin: 0;
+}
+
+.fit__cat {
+  width: 180px;
+  transform: rotate(4deg);
+  filter: drop-shadow(0 10px 24px rgba(26, 26, 26, 0.1));
+}
+
+.fit__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+@media (min-width: 800px) {
+  .fit__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.fit__col {
+  background: var(--color-paper);
+  padding: 2rem 2rem 2.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-line);
+}
+.fit__col--yes {
+  transform: rotate(-0.6deg);
+}
+.fit__col--no {
+  transform: rotate(0.5deg);
+}
+
+.fit__col-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-ink);
+}
+.fit__col--yes .fit__col-title::before {
+  content: "\2713 ";
+  color: var(--color-rose);
+}
+.fit__col--no .fit__col-title::before {
+  content: "\2717 ";
+  color: var(--color-ink-faded);
+}
+
+.fit__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fit__list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--color-line);
+  font-size: 1rem;
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+}
+.fit__list li:last-child {
+  border-bottom: 0;
+}
+
+.fit__closer {
+  margin-top: var(--space-lg);
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   PRIVACY
+   -------------------------------------------------------------------------- */
+.privacy {
+  background: var(--color-paper);
+}
+
+.privacy__heading {
+  margin-bottom: 1.5rem;
+}
+
+.privacy__lede {
+  font-size: 1.2rem;
+  color: var(--color-ink-soft);
+  font-family: var(--font-display);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.privacy__block {
+  margin-bottom: var(--space-lg);
+}
+
+.privacy__subhead {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink);
+  margin-bottom: 0.75rem;
+}
+
+.privacy__path {
+  display: inline-block;
+  background: var(--color-paper-deep);
+  border: 1px dashed var(--color-rose);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  margin-bottom: 1rem;
+}
+
+.privacy__note {
+  color: var(--color-ink-soft);
+  font-size: 1.02rem;
+}
+
+.privacy__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.privacy__list li {
+  padding: 0.65rem 0 0.65rem 1.8rem;
+  position: relative;
+  color: var(--color-ink);
+  border-bottom: 1px dashed var(--color-line);
+}
+.privacy__list li:last-child {
+  border-bottom: 0;
+}
+.privacy__list li::before {
+  content: "\26A1";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  color: var(--color-rose);
+}
+
+.privacy__verify {
+  margin-top: var(--space-lg);
+  padding: 2rem;
+  background: var(--color-paper-deep);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .privacy__verify {
+    grid-template-columns: 160px 1fr;
+  }
+}
+.privacy__cat {
+  width: 160px;
+  transform: rotate(-3deg);
+}
+
+/* --------------------------------------------------------------------------
+   PRICING
+   -------------------------------------------------------------------------- */
+.pricing {
+  background: var(--color-paper-deep);
+  text-align: center;
+}
+
+.pricing__heading {
+  margin-bottom: var(--space-lg);
+}
+
+.pricing__card {
+  background: var(--color-paper);
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 24px 60px -16px rgba(26, 26, 26, 0.1);
+  transform: rotate(-0.4deg);
+  position: relative;
+}
+.pricing__card::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(4deg);
+  width: 80px;
+  height: 24px;
+  background: var(--color-rose-soft);
+  border: 1px dashed var(--color-rose);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.pricing__price {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.pricing__dollar {
+  font-size: 2rem;
+}
+.pricing__amount {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 400;
+}
+.pricing__unit {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink-faded);
+  margin-left: 0.4rem;
+}
+
+.pricing__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: left;
+}
+.pricing__features li {
+  padding: 0.6rem 0 0.6rem 1.6rem;
+  position: relative;
+  font-size: 0.98rem;
+  color: var(--color-ink-soft);
+  border-bottom: 1px dashed var(--color-line);
+}
+.pricing__features li:last-child {
+  border-bottom: 0;
+}
+.pricing__features li strong {
+  font-weight: 700;
+  color: var(--color-rose);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 1.05em;
+}
+.pricing__features li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  color: var(--color-rose);
+  font-weight: 600;
+}
+
+.pricing__cta {
+  display: inline-flex;
+  margin-bottom: 1.25rem;
+}
+
+.pricing__fineprint {
+  font-size: 0.85rem;
+  color: var(--color-ink-faded);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ
+   -------------------------------------------------------------------------- */
+.faq {
+  background: var(--color-paper);
+}
+
+.faq__heading {
+  margin-bottom: var(--space-lg);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-line);
+  padding: 1.25rem 0;
+}
+.faq__item:first-of-type {
+  border-top: 1px solid var(--color-line);
+}
+
+.faq__item summary {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-ink);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color var(--duration-fast) var(--ease);
+}
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+.faq__item summary::after {
+  content: "+";
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  color: var(--color-rose);
+  flex-shrink: 0;
+  transition: transform var(--duration-med) var(--ease);
+}
+.faq__item[open] summary::after {
+  content: "\2212";
+}
+.faq__item summary:hover {
+  color: var(--color-rose);
+}
+
+.faq__answer {
+  padding: 1rem 0 0.25rem;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+}
+.faq__answer code {
+  background: var(--color-paper-deep);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}

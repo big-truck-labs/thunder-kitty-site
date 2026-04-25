@@ -49,6 +49,15 @@ h3 em {
   letter-spacing: -0.02em;
 }
 
+.hero__title .hero__asterisk {
+  font-size: 0.5em;
+  vertical-align: 0.6em;
+  font-style: italic;
+  color: var(--color-rose);
+  margin-left: 0.05em;
+  font-weight: normal;
+}
+
 .hero__sub {
   font-size: clamp(1.15rem, 1.8vw, 1.35rem);
   color: var(--color-ink-soft);

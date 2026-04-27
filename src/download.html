@@ -7,26 +7,29 @@ noindex: true
 
 {% extends "layouts/base.html" %} {% block body %}
 
-<!-- TODO: Uncomment auto-download script once DMG is uploaded to thunder-kitty-releases
 <script>
-  window.addEventListener('DOMContentLoaded', function () {
-    var link = document.createElement('a');
-    link.href = '/downloads/Thunder-Kitty.dmg';
+  window.addEventListener("DOMContentLoaded", function () {
+    var link = document.createElement("a");
+    link.href =
+      "https://github.com/big-truck-labs/thunder-kitty-releases/releases/latest/download/ThunderKitty.dmg";
     link.click();
   });
 </script>
--->
 
 <div class="legal">
   <h1>You're in.</h1>
   <p>
-    The download will be available shortly. Check back soon, or
-    <a href="mailto:hello@thunderkitty.app">email us</a>
-    and we'll send it your way.
+    Your download should start automatically. If it doesn't,
+    <a
+      href="https://github.com/big-truck-labs/thunder-kitty-releases/releases/latest/download/ThunderKitty.dmg"
+    >
+      click here to download
+    </a>
+    .
   </p>
   <p>
-    <code>Thunder-Kitty.dmg</code>
-    &middot; ~TBD MB &middot; Requires macOS 26 (Tahoe) or later, Apple Silicon
+    <code>ThunderKitty.dmg</code>
+    &middot; Requires macOS 26 (Tahoe) or later, Apple Silicon
   </p>
 
   <hr />
@@ -82,16 +85,19 @@ noindex: true
 
   <details>
     <summary>
-      &ldquo;Thunder Kitty can't be opened because Apple cannot check it for
-      malicious software&rdquo;
+      &ldquo;Thunder Kitty can't be opened&rdquo; or a Gatekeeper warning
     </summary>
     <p>
-      This is macOS being cautious about apps outside the App Store. Right-click
-      Thunder Kitty in your Applications folder and choose
+      Thunder Kitty is signed and notarized by Apple, so this shouldn't happen.
+      If it does, right-click Thunder Kitty in your Applications folder and
+      choose
       <strong>Open</strong>
-      . Click
+      , then click
       <strong>Open</strong>
-      again in the dialog. You only have to do this once.
+      again in the dialog. You only need to do this once. If the problem
+      persists, email
+      <a href="mailto:hello@thunderkitty.app">hello@thunderkitty.app</a>
+      .
     </p>
   </details>
 

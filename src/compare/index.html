@@ -1,0 +1,72 @@
+---
+title: Thunder Kitty vs. the alternatives
+description: Honest comparisons between Thunder Kitty and other meeting tools — where we fit, and where we don't.
+pageCss: compare.css
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="compare">
+  <section class="compare__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Compare</p>
+      <h1>
+        Thunder Kitty vs.
+        <em>the alternatives</em>
+      </h1>
+      <div class="compare__intro">
+        <p>
+          We're a small product with a specific point of view. These pages are
+          our attempt to be honest about where we fit &mdash; and where we
+          don't.
+        </p>
+        <p>
+          Each comparison is written to help you make the right call, even if
+          that call isn't Thunder Kitty.
+        </p>
+      </div>
+
+      <ul class="compare-index__list">
+        {% for comp in competitors %}
+        <li class="compare-index__item">
+          <a href="/compare/{{ comp.slug }}/" class="compare-index__link">
+            <span>
+              <span class="compare-index__name">{{ comp.name }}</span>
+              <span class="compare-index__tagline">— {{ comp.tagline }}</span>
+            </span>
+            <span class="compare-index__arrow">&rarr;</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="compare__closing">
+    <div class="container container--content">
+      <div class="compare__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="compare__cta-cat"
+        />
+        <div class="compare__cta-card">
+          <p class="compare__cta-trial">
+            Try Thunder Kitty free for 7 days. No credit card. No account. Just
+            a download.
+          </p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+          <p class="compare__cta-concession">
+            If you try an alternative and it's the better fit, use it. We'd
+            genuinely rather you use the right tool.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

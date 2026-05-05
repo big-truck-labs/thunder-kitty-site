@@ -1,0 +1,134 @@
+---
+pagination:
+  data: competitors
+  size: 1
+  alias: competitor
+  addAllPagesToCollections: true
+permalink: "/compare/{{ competitor.slug }}/"
+pageCss: compare.css
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="compare">
+  <!-- HERO -->
+  <section class="compare__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Compare</p>
+      <h1>
+        Thunder Kitty vs
+        <em>{{ competitor.name }}</em>
+      </h1>
+      <p class="compare__tagline">{{ competitor.tagline }}</p>
+      <div class="compare__intro">
+        {% for p in competitor.intro %}
+        <p>{{ p }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="compare__table-section">
+    <div class="container container--content">
+      <table class="compare__table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="compare__th-tk">Thunder Kitty</th>
+            <th class="compare__th-them">{{ competitor.name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in competitor.comparison_table %}
+          <tr>
+            <td>{{ row.feature }}</td>
+            <td>{{ row.tk }}</td>
+            <td data-them="{{ competitor.name }}">{{ row.them }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BODY SECTIONS -->
+  <section>
+    <div class="container container--content">
+      {% for section in competitor.sections %}
+      <div class="compare__section" id="{{ section.id }}">
+        <h2 class="compare__section-heading">{{ section.heading }}</h2>
+        <div class="compare__section-body">
+          {% for p in section.body %}
+          <p>{{ p }}</p>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- RIGHT FOR YOU IF… -->
+  <section class="fit">
+    <div class="container">
+      <div class="fit__header">
+        <h2 class="fit__heading">
+          Which one is
+          <em>right for you?</em>
+        </h2>
+      </div>
+
+      <div class="fit__grid">
+        <div class="fit__col fit__col--yes">
+          <h3 class="fit__col-title">Thunder Kitty, if&hellip;</h3>
+          <ul class="fit__list">
+            {% for item in competitor.tk_wins %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="fit__col fit__col--no">
+          <h3 class="fit__col-title">{{ competitor.name }}, if&hellip;</h3>
+          <ul class="fit__list">
+            {% for item in competitor.them_wins %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING + CTA -->
+  <section class="compare__closing">
+    <div class="container container--content">
+      <div class="compare__closing-text">
+        {% for p in competitor.closing %}
+        <p>{{ p }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="compare__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="compare__cta-cat"
+        />
+        <div class="compare__cta-card">
+          <p class="compare__cta-trial">
+            Try Thunder Kitty free for 7 days. No credit card. No account. Just
+            a download.
+          </p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+          <p class="compare__cta-concession">{{ competitor.cta_concession }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Thunder Kitty — compare.css
+   Comparison pages: /compare/ index and /compare/[slug]/ detail pages.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Section rhythm (matches home.css pattern)
+   -------------------------------------------------------------------------- */
+.compare section {
+  padding: var(--space-2xl) 0;
+}
+.compare section + section {
+  padding-top: var(--space-xl);
+}
+
+h1 em,
+h2 em,
+h3 em {
+  font-style: italic;
+  color: var(--color-rose);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   HERO
+   -------------------------------------------------------------------------- */
+.compare__hero {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.compare__tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--color-rose);
+  margin-bottom: var(--space-md);
+}
+
+.compare__intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+  margin-top: var(--space-md);
+}
+.compare__intro p {
+  margin-bottom: 1em;
+}
+.compare__intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   COMPARISON TABLE
+   -------------------------------------------------------------------------- */
+.compare__table-section {
+  background: var(--color-paper-deep);
+}
+
+.compare__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+}
+
+.compare__table thead th {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 2px solid var(--color-line);
+  background: var(--color-paper);
+}
+
+.compare__table thead th:first-child {
+  color: var(--color-ink-faded);
+}
+
+.compare__table thead .compare__th-tk {
+  color: var(--color-rose);
+}
+
+.compare__table thead .compare__th-them {
+  color: var(--color-ink-soft);
+}
+
+.compare__table tbody tr {
+  border-bottom: 1px solid var(--color-line);
+}
+.compare__table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.compare__table td {
+  padding: 0.85rem 1.25rem;
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+.compare__table td:first-child {
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.compare__table td:nth-child(2) {
+  color: var(--color-ink);
+}
+
+.compare__table td:nth-child(3) {
+  color: var(--color-ink-soft);
+}
+
+/* Mobile: stack table rows into cards */
+@media (max-width: 640px) {
+  .compare__table,
+  .compare__table thead,
+  .compare__table tbody,
+  .compare__table tr,
+  .compare__table th,
+  .compare__table td {
+    display: block;
+  }
+
+  .compare__table thead {
+    display: none;
+  }
+
+  .compare__table tbody tr {
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--color-line);
+  }
+  .compare__table tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .compare__table td {
+    padding: 0.3rem 0;
+  }
+
+  .compare__table td:first-child {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-ink-faded);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .compare__table td:nth-child(2)::before {
+    content: "Thunder Kitty: ";
+    font-weight: 600;
+    color: var(--color-rose);
+    font-size: 0.82rem;
+  }
+
+  .compare__table td:nth-child(3)::before {
+    content: attr(data-them) ": ";
+    font-weight: 600;
+    color: var(--color-ink-faded);
+    font-size: 0.82rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   BODY SECTIONS (narrative content)
+   -------------------------------------------------------------------------- */
+.compare__section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.compare__section:last-of-type {
+  border-bottom: 0;
+}
+
+.compare__section-heading {
+  margin-bottom: var(--space-md);
+}
+
+.compare__section-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+}
+.compare__section-body p {
+  margin-bottom: 1.25em;
+}
+.compare__section-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   FIT SECTION — "Right for you if…" (matches homepage .fit pattern)
+   -------------------------------------------------------------------------- */
+.fit {
+  background: var(--color-rose-soft);
+  position: relative;
+}
+
+.fit__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.fit__heading {
+  max-width: 16ch;
+  margin: 0;
+}
+
+.fit__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+@media (min-width: 800px) {
+  .fit__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.fit__col {
+  background: var(--color-paper);
+  padding: 2rem 2rem 2.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-line);
+}
+.fit__col--yes {
+  transform: rotate(-0.6deg);
+}
+.fit__col--no {
+  transform: rotate(0.5deg);
+}
+
+.fit__col-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-ink);
+}
+.fit__col--yes .fit__col-title::before {
+  content: "\2713 ";
+  color: var(--color-rose);
+}
+.fit__col--no .fit__col-title::before {
+  content: "\2717 ";
+  color: var(--color-ink-faded);
+}
+
+.fit__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fit__list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--color-line);
+  font-size: 1rem;
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+}
+.fit__list li:last-child {
+  border-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CLOSING + CTA
+   -------------------------------------------------------------------------- */
+.compare__closing {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.compare__closing-text {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+  margin-bottom: var(--space-lg);
+}
+.compare__closing-text p {
+  margin-bottom: 1em;
+}
+.compare__closing-text p:last-child {
+  margin-bottom: 0;
+}
+
+.compare__cta-wrap {
+  position: relative;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.compare__cta-cat {
+  position: absolute;
+  top: -40px;
+  right: -120px;
+  width: 120px;
+  transform: rotate(8deg);
+  filter: drop-shadow(0 8px 20px rgba(26, 26, 26, 0.1));
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .compare__cta-cat {
+    right: -20px;
+    width: 100px;
+    top: -35px;
+  }
+}
+@media (max-width: 640px) {
+  .compare__cta-cat {
+    display: none;
+  }
+}
+
+.compare__cta-card {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-radius: 6px;
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.compare__cta-trial {
+  font-size: 1.1rem;
+  color: var(--color-paper);
+  font-weight: 500;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.compare__cta-card .btn--primary {
+  background: var(--color-rose);
+  color: var(--color-paper);
+  margin-bottom: 1.25rem;
+}
+.compare__cta-card .btn--primary:hover {
+  background: var(--color-coral);
+}
+
+.compare__cta-concession {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-ink-faded);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   INDEX PAGE — competitor listing
+   -------------------------------------------------------------------------- */
+.compare-index__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xl) 0 0;
+}
+
+.compare-index__item {
+  border-bottom: 1px solid var(--color-line);
+}
+.compare-index__item:first-child {
+  border-top: 1px solid var(--color-line);
+}
+
+.compare-index__link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
+}
+.compare-index__link:hover {
+  color: var(--color-rose);
+}
+.compare-index__link:hover .compare-index__arrow {
+  transform: translateX(4px);
+  color: var(--color-rose);
+}
+
+.compare-index__name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-ink);
+}
+
+.compare-index__tagline {
+  font-size: 0.95rem;
+  color: var(--color-ink-faded);
+  font-style: italic;
+}
+
+.compare-index__arrow {
+  font-size: 1.25rem;
+  color: var(--color-ink-faded);
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+@media (max-width: 600px) {
+  .compare-index__link {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .compare-index__arrow {
+    display: none;
+  }
+}

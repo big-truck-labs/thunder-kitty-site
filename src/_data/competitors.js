@@ -209,7 +209,7 @@ module.exports = [
           `Otter is named in a consolidated federal class action — In re Otter.AI Privacy Litigation — with a motion-to-dismiss hearing scheduled for May 20, 2026. These are allegations, not findings. Otter denies wrongdoing. But the two legal theories are worth understanding clearly.`,
           `The recording claim (ECPA/wiretapping): When Otter joins a meeting, Otter the company receives your audio on their servers in real-time. The lawsuit argues that makes Otter a third-party interceptor — a separate entity processing communications it wasn't a party to. This is legally distinct from a user running recording software on their own device. When you use Thunder Kitty, you're recording your own meeting on your own Mac. No company receives anything. The legal posture is the same as pressing record on your phone.`,
           `The biometric claim (BIPA): Otter's speaker identification feature generates voiceprints — biometric identifiers — from everyone who speaks in a recorded meeting. That includes people who never created an Otter account, never agreed to anything, and had no idea Otter was present. The lawsuit argues this violates Illinois's biometric privacy law, which requires written consent before collecting voiceprints.`,
-          `Thunder Kitty does voice enrollment for the user — you can enroll your own voice so TK always knows when it's you speaking. We actually built cross-participant voice fingerprinting too, tested it, and then removed it. The reason: identifying other people's voices across meetings would mean collecting biometric data about people who never consented to it, even locally on your Mac. We decided that wasn't a line we were willing to cross. So TK knows your voice. Other speakers are labeled Speaker 1, Speaker 2, and so on — you can rename them in a transcript, but we don't fingerprint anyone who didn't ask us to.`,
+          `Thunder Kitty does voice enrollment for the user — you can enroll your own voice so Thunder Kitty always knows when it's you speaking. We actually built cross-participant voice fingerprinting too, tested it, and then removed it. The reason: identifying other people's voices across meetings would mean collecting biometric data about people who never consented to it, even locally on your Mac. We decided that wasn't a line we were willing to cross. So Thunder Kitty knows your voice. Other speakers are labeled Speaker 1, Speaker 2, and so on — you can rename them in a transcript, but we don't fingerprint anyone who didn't ask us to.`,
         ],
       },
       {
@@ -250,5 +250,238 @@ module.exports = [
     ],
 
     cta_concession: `If you try it and Otter is the better fit, use Otter. We'd genuinely rather you use the right tool.`,
+  },
+
+  {
+    slug: "fireflies",
+    name: "Fireflies",
+    tagline: "The feature we built and removed",
+    intro: [
+      `Fireflies is an enterprise meeting intelligence platform used by sales teams, recruiters, and operations leads who need their meeting notes wired into their CRM by end of day. It has a visible bot, cloud transcription, 69+ languages, and a marketplace of integrations. It does a lot.`,
+      `Thunder Kitty is a personal notepad that transcribes on your Mac. No bot. No cloud. No integrations. It does less, and for most of Fireflies' users, that's not the right tradeoff.`,
+      `But there's one thing worth understanding before you decide.`,
+    ],
+
+    comparison_table: [
+      {
+        feature: "Transcription",
+        tk: "Apple SpeechAnalyzer — on your Mac",
+        them: "Cloud (Fireflies' servers)",
+      },
+      {
+        feature: "Bot joins your call",
+        tk: "No",
+        them: "Yes — visible to all participants",
+      },
+      { feature: "Works in airplane mode", tk: "✓", them: "✗" },
+      { feature: "Mobile app", tk: "✗", them: "✓ iOS + Android" },
+      { feature: "Languages", tk: "English", them: "69+" },
+      {
+        feature: "Speaker diarization",
+        tk: "Named, with voice enrollment",
+        them: "✓ via Speaker Recognition",
+      },
+      {
+        feature: "Voiceprints stored",
+        tk: "User only, locally",
+        them: "All participants, on Fireflies' servers",
+      },
+      {
+        feature: "Monthly recording limit",
+        tk: "None",
+        them: "800 min (free) / unlimited (Pro)",
+      },
+      {
+        feature: "AI summary credits",
+        tk: "Unlimited",
+        them: "20/month (Pro) — same as free",
+      },
+      {
+        feature: "CRM integrations",
+        tk: "✗",
+        them: "Salesforce, HubSpot, Zapier, Slack",
+      },
+      {
+        feature: "Your files",
+        tk: "Plain .md in ~/Documents",
+        them: "In Fireflies' database",
+      },
+      {
+        feature: "Model training",
+        tk: "N/A — nothing sent",
+        them: "Opt-out in settings",
+      },
+      {
+        feature: "Active litigation",
+        tk: "None",
+        them: "Federal BIPA class action (2025)",
+      },
+      { feature: "Price", tk: "$10/month", them: "$18/month (Pro, monthly)" },
+    ],
+
+    sections: [
+      {
+        id: "what-fireflies-does",
+        heading: "What Fireflies does that Thunder Kitty doesn't",
+        body: [
+          `Fireflies is built for teams that run a lot of meetings and need the output wired into their workflow automatically. It handles 69 languages. It has mobile apps. It syncs to Salesforce and HubSpot. It has a real-time Perplexity integration that lets you fact-check claims during a meeting without leaving the call.`,
+          `If you need meeting notes to land in your CRM without any manual steps, Fireflies is probably worth evaluating. Thunder Kitty doesn't do any of that and isn't trying to.`,
+          `One thing to know about Fireflies pricing before you sign up: the AI credits system. Pro plan users get 20 AI credits per month — the same as the free plan. AI summaries, the AskFred assistant, and Smart Highlights all draw from this pool. Heavy users burn through it quickly and need to purchase add-on credits separately.`,
+        ],
+      },
+      {
+        id: "lawsuit",
+        heading: "The feature at the center of the lawsuit",
+        body: [
+          `In December 2025, an Illinois resident named Katelin Cruz filed a federal class action against Fireflies — Cruz v. Fireflies.AI Corp. She hadn't signed up for Fireflies. She hadn't agreed to its terms of service. She joined a routine meeting at a nonprofit, and Fireflies' bot was already there, enabled by someone else.`,
+          `The specific feature at issue is Fireflies' "Speaker Recognition" — a capability that identifies different speakers in meetings and audio files by generating voiceprints, which are biometric identifiers under Illinois law.`,
+          `The lawsuit alleges three BIPA violations: Fireflies never told participants their voiceprints were being collected, never obtained written consent, and never published a policy for how long it retains biometric data before destroying it. The plaintiff represents a potential class of anyone whose voiceprint was collected by Fireflies without consent — including people who had never heard of the product.`,
+          `These are allegations, not findings. Fireflies denies wrongdoing and the case is pending.`,
+        ],
+      },
+      {
+        id: "our-decision",
+        heading: "The decision we made",
+        body: [
+          `Thunder Kitty built the same feature. Speaker Recognition, voice fingerprinting across meetings, automatic identification of everyone on a call. We tested it, it worked, and then we removed it.`,
+          `The reason: building voiceprints of people in your meetings — even locally, even on your own Mac — means making a decision about other people's biometric data without their knowledge. The person who downloaded Thunder Kitty consented to it. The person on the other end of their call didn't.`,
+          `So Thunder Kitty does voice enrollment for the user only. You can enroll your own voice and Thunder Kitty will always know when it's you speaking, across every meeting you record. Other speakers are identified as Speaker 1, Speaker 2, and so on. You can rename them in a transcript and it cascades through that session — but we don't fingerprint anyone who didn't ask us to.`,
+          `It's a smaller feature. We think it's the right call.`,
+        ],
+      },
+    ],
+
+    them_wins: [
+      "Your team runs high volumes of sales, recruiting, or ops meetings and needs CRM sync",
+      "You need 69+ languages for international teams",
+      "You want a searchable meeting archive with workflow integrations",
+      "The bot is visible in your meetings and your team has consented to that",
+    ],
+
+    tk_wins: [
+      "Your meetings involve people who haven't consented to a bot collecting their voiceprints",
+      "You want your transcripts as plain files, not locked in a database",
+      "You want a simple tool for personal or professional use without an enterprise footprint",
+      "You're in a field — therapy, journalism, law, research — where data minimization matters",
+    ],
+
+    closing: [
+      `Fireflies is a capable enterprise tool with a cloud pipeline, a visible bot, and a feature set built for teams.`,
+      `Thunder Kitty is a personal tool that made a deliberate decision about whose biometric data it's willing to collect. That decision costs some features. We think the tradeoff is right.`,
+    ],
+
+    cta_concession: `If you try it and Fireflies is the better fit for your team, use Fireflies. We'd genuinely rather you use the right tool.`,
+  },
+
+  {
+    slug: "fathom",
+    name: "Fathom",
+    tagline:
+      "Fathom records your Zoom calls. Thunder Kitty records everything.",
+    intro: [
+      `Fathom is the most generous free meeting tool on the market. Unlimited recordings, unlimited transcription, fast AI summaries, video replay, and a free plan that actually works — no minute caps, no trial expiration. It's genuinely excellent at what it does.`,
+      `What it does is record your scheduled online meetings. Zoom, Google Meet, Microsoft Teams. That's the scope.`,
+      `Thunder Kitty records anything that makes sound on your Mac.`,
+    ],
+
+    comparison_table: [
+      {
+        feature: "Transcription",
+        tk: "Apple SpeechAnalyzer — on your Mac",
+        them: "Cloud (Fathom's servers)",
+      },
+      {
+        feature: "Bot joins your call",
+        tk: "No",
+        them: "Optional — bot-free mode in beta",
+      },
+      { feature: "Works in airplane mode", tk: "✓", them: "✗" },
+      { feature: "Video recording", tk: "✗", them: "✓" },
+      {
+        feature: "Audio sources",
+        tk: "Any system audio",
+        them: "Zoom, Meet, Teams only",
+      },
+      { feature: "Phone calls + FaceTime", tk: "✓", them: "✗" },
+      { feature: "In-person conversations", tk: "✓", them: "✗" },
+      { feature: "Languages", tk: "English", them: "28" },
+      {
+        feature: "Speaker diarization",
+        tk: "Named, with voice enrollment",
+        them: "✓",
+      },
+      {
+        feature: "Your files",
+        tk: "Plain .md in ~/Documents",
+        them: "In Fathom's database",
+      },
+      { feature: "AI training on your data", tk: "No", them: "No" },
+      {
+        feature: "AI summary limit",
+        tk: "Unlimited",
+        them: "5/month (free) / unlimited (Premium)",
+      },
+      { feature: "Price", tk: "$10/month", them: "$20/month (Premium)" },
+    ],
+
+    sections: [
+      {
+        id: "what-fathom-does",
+        heading: "What Fathom does that Thunder Kitty doesn't",
+        body: [
+          `Video recording. When a meeting ends in Fathom, you have the full recording alongside the transcript — and every line of the transcript is linked to its timestamp. Click any sentence and jump directly to that moment in the video. For sales calls, client reviews, or any meeting you might need to replay, that's genuinely useful.`,
+          `Fathom also has a free plan that isn't a trick. Unlimited recording and transcription, forever. The only meaningful limit is AI summaries — capped at five per month on the free tier. If you attend more than five meetings a month that need summaries, Premium is $20/month.`,
+          `28 languages. Mobile apps. Team collaboration features. A searchable library across your entire meeting history.`,
+          `And one more thing worth saying plainly: Fathom doesn't use your data to train their AI models. No opt-out required. For a cloud-based tool, that's a meaningful commitment.`,
+        ],
+      },
+      {
+        id: "what-tk-records",
+        heading: "What Thunder Kitty records that Fathom can't",
+        body: [
+          `Fathom connects to your calendar and joins your scheduled Zoom, Meet, or Teams calls. That's the workflow it's built for.`,
+          `Thunder Kitty captures any audio playing through your Mac. A Zoom call, yes — but also a FaceTime conversation. A phone call on your Mac. A recorded interview you're playing back. An in-person meeting where your Mac is sitting on the table. A voice memo you want transcribed. Anything.`,
+          `There's no calendar required. No integration to set up. No meeting platform to be compatible with. If it makes sound on your Mac, Thunder Kitty can transcribe it.`,
+        ],
+      },
+      {
+        id: "different-ideas",
+        heading: "Two different ideas about what a meeting tool should be",
+        body: [
+          `Fathom is built around the scheduled online meeting as the primary unit of work. It joins, it records, it summarizes, it stores. The workflow is: calendar event → Fathom joins → summary in your inbox.`,
+          `Thunder Kitty is built around the notepad as the primary unit of work. You open it when you need it, write what you want to write, and the transcript is there alongside your notes when the conversation is over. The workflow is: you're having a conversation → you open Thunder Kitty → you have a record.`,
+          `Fathom is better if your most important conversations happen in scheduled video calls and you want them captured automatically. Thunder Kitty is better if your most important conversations happen everywhere — and you want a private, permanent record that lives on your Mac.`,
+        ],
+      },
+      {
+        id: "files",
+        heading: "On files",
+        body: [
+          `When a meeting ends in Thunder Kitty, your notes and transcript sit in ~/Documents/Thunder Kitty Notes/ as a plain markdown file. Open it in any app. Point Claude at the whole folder and ask questions across every conversation you've ever recorded.`,
+          `Fathom's recordings and transcripts live in Fathom's database. The product is excellent, but the archive is theirs.`,
+        ],
+      },
+    ],
+
+    them_wins: [
+      "Your important conversations happen only in Zoom, Meet, or Teams",
+      "You want video replay with transcript-linked timestamps",
+      "You want a free plan with unlimited recording before committing to a paid tool",
+      "You need 28 languages or team collaboration features",
+    ],
+
+    tk_wins: [
+      "Your important conversations happen everywhere — phone calls, FaceTime, in-person, any platform",
+      "You want your transcripts as plain files, owned outright, readable anywhere",
+      "Your meetings involve information that shouldn't leave your Mac",
+      "You prefer a notepad that transcribes over a recorder that takes notes",
+    ],
+
+    closing: [
+      `Fathom is the best free tool for recording scheduled online meetings. If that's your use case, it's hard to beat.`,
+      `Thunder Kitty is for everything else — and for people who want the record to live on their Mac, not someone else's server.`,
+    ],
+
+    cta_concession: `If you try it and Fathom is the better fit, use Fathom. We'd genuinely rather you use the right tool.`,
   },
 ];

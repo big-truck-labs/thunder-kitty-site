@@ -8,7 +8,7 @@ pageCss: legal.css
 
 <div class="legal">
   <h1>Privacy Policy</h1>
-  <p><em>Last updated: May 4, 2026</em></p>
+  <p><em>Last updated: May 18, 2026</em></p>
 
   <h2>The short version</h2>
   <p>
@@ -27,9 +27,10 @@ pageCss: legal.css
   <h3>What the app collects</h3>
   <p>
     <strong>Nothing about your content.</strong>
-    Your audio, transcripts, notes, and calendar data never leave your machine.
-    We have no cloud, no database of your recordings, no dashboard where we can
-    see what you're doing.
+    Your audio, transcripts, notes, and calendar data — including any data
+    fetched from Google Calendar — never leave your machine and are never
+    uploaded to Thunder Kitty's servers. We have no cloud, no database of your
+    recordings, no dashboard where we can see what you're doing.
   </p>
   <p>
     Transcription runs on your Mac using Apple's
@@ -68,15 +69,16 @@ pageCss: legal.css
   </p>
 
   <h3>What the app does need the network for</h3>
-  <p>Two things, both small:</p>
+  <p>Three things, two of which are automatic and one optional:</p>
   <p>
     <strong>License validation.</strong>
     When you start your trial or activate a paid subscription, Thunder Kitty
-    contacts our server to verify your license. This is a request containing
-    your license key (a random string — not linked to your identity) and your
-    app version. We use this to prevent license sharing and to let you know when
-    your trial or subscription ends. We do not log your IP address beyond what
-    any web server logs by default for security and abuse prevention.
+    contacts Lemon Squeezy's servers to verify your license. This is a request
+    containing your license key (a random string — not linked to your identity)
+    and your app version. We use this to prevent license sharing and to let you
+    know when your trial or subscription ends. Lemon Squeezy does not log your
+    IP address beyond what any web server logs by default for security and abuse
+    prevention.
   </p>
   <p>
     <strong>Software updates.</strong>
@@ -92,6 +94,18 @@ pageCss: legal.css
     <code>appcast.xml</code>
     file. GitHub may log that request. We do not receive any data from these
     checks beyond what GitHub provides in aggregated analytics.
+  </p>
+  <p>
+    <strong>Google Calendar (optional).</strong>
+    When you connect your Google account, Thunder Kitty authenticates via
+    Google's OAuth 2.0 and periodically fetches calendar event data — event
+    titles, times, attendees, and video call links — using the Google Calendar
+    API. This data is used solely to display upcoming meetings and is cached
+    only on your Mac. It is never transmitted off your device. Thunder Kitty
+    does not operate any servers that receive or store your personal data or
+    content. You can disconnect your Google account at any time in Settings,
+    which immediately clears all cached Google Calendar data. Google's privacy
+    policy governs the authentication process.
   </p>
 
   <h3>How to verify for yourself</h3>
@@ -149,6 +163,12 @@ pageCss: legal.css
       events they belong to. Thunder Kitty only reads from Calendar; it never
       writes, modifies, or deletes calendar events. Calendar data stays on your
       Mac. We never receive it.
+    </li>
+    <li>
+      <strong>Google Calendar access (optional)</strong>
+      — read-only access to your Google Calendar event details and calendar list
+      via Google's Calendar API, used for meeting display and note association.
+      No Google Calendar data is ever written, modified, or stored persistently.
     </li>
     <li>
       <strong>Notifications</strong>

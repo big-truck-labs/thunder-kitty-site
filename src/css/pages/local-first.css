@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Thunder Kitty — local-first.css
+   /local-first/ standalone page.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Section rhythm (matches compare.css / for.css pattern)
+   -------------------------------------------------------------------------- */
+.local-first section {
+  padding: var(--space-2xl) 0;
+}
+.local-first section + section {
+  padding-top: var(--space-xl);
+}
+
+h1 em,
+h2 em,
+h3 em {
+  font-style: italic;
+  color: var(--color-rose);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   HERO
+   -------------------------------------------------------------------------- */
+.local-first__hero {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.local-first__subheadline {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  max-width: 55ch;
+  margin-top: var(--space-md);
+}
+
+/* --------------------------------------------------------------------------
+   BODY SECTIONS
+   -------------------------------------------------------------------------- */
+.local-first__section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.local-first__section:last-of-type {
+  border-bottom: 0;
+}
+
+.local-first__section--alt {
+  background: var(--color-paper-deep);
+  border-bottom: none;
+}
+
+.local-first__section-heading {
+  margin-bottom: var(--space-md);
+}
+
+.local-first__section-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+}
+.local-first__section-body p {
+  margin-bottom: 1.25em;
+}
+.local-first__section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.local-first__section-body a {
+  color: var(--color-rose);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.local-first__section-body a:hover {
+  color: var(--color-coral);
+}
+
+/* --------------------------------------------------------------------------
+   VERIFY LIST
+   -------------------------------------------------------------------------- */
+.local-first__verify-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0;
+  max-width: 60ch;
+}
+
+.local-first__verify-list li {
+  position: relative;
+  padding: 1rem 0 1rem 2rem;
+  border-bottom: 1px dashed var(--color-line);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+.local-first__verify-list li:last-child {
+  border-bottom: 0;
+}
+
+.local-first__verify-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  color: var(--color-rose);
+  font-weight: 600;
+}
+
+.local-first__verify-list li strong {
+  color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   CLOSING + CTA (matches compare/for pattern)
+   -------------------------------------------------------------------------- */
+.local-first__closing {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.local-first__cta-wrap {
+  position: relative;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.local-first__cta-cat {
+  position: absolute;
+  top: -40px;
+  right: -120px;
+  width: 120px;
+  transform: rotate(8deg);
+  filter: drop-shadow(0 8px 20px rgba(26, 26, 26, 0.1));
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .local-first__cta-cat {
+    right: -20px;
+    width: 100px;
+    top: -35px;
+  }
+}
+@media (max-width: 640px) {
+  .local-first__cta-cat {
+    display: none;
+  }
+}
+
+.local-first__cta-card {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-radius: 6px;
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.local-first__cta-headline {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--color-paper);
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.local-first__cta-trial {
+  font-size: 1rem;
+  color: var(--color-paper);
+  opacity: 0.85;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.local-first__cta-card .btn--primary {
+  background: var(--color-rose);
+  color: var(--color-paper);
+}
+.local-first__cta-card .btn--primary:hover {
+  background: var(--color-coral);
+}

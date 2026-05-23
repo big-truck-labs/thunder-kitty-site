@@ -1,0 +1,191 @@
+---
+layout: layouts/base.html
+title: Thunder Kitty | Local-First Meeting Transcription for Mac
+description: Thunder Kitty is a local-first meeting transcription tool for macOS. Real-time transcription, on-device AI, and meeting intelligence — nothing leaves your Mac.
+pageCss: local-first.css
+---
+
+{% block body %}
+
+<article class="local-first">
+  <!-- HERO -->
+  <section class="local-first__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Local-first</p>
+      <h1>
+        What local-first meeting intelligence
+        <em>actually looks like</em>
+      </h1>
+      <p class="local-first__subheadline">
+        Real-time transcription. On-device AI. Meeting intelligence that never
+        leaves your Mac. Not &ldquo;private by default.&rdquo; Not
+        &ldquo;encrypted in transit.&rdquo; Local-first. As in: nothing leaves.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT LOCAL-FIRST MEANS -->
+  <section class="local-first__section">
+    <div class="container container--content">
+      <h2 class="local-first__section-heading">What local-first means</h2>
+      <div class="local-first__section-body">
+        <p>
+          Local-first isn't a marketing term. It's a technical architecture.
+          Audio is processed on your device. Transcripts are stored on your
+          device. AI runs on your device. Nothing is routed through a server
+          &mdash; not ours, not a partner's, not anyone's.
+        </p>
+        <p>
+          Most transcription tools call themselves private, then send your audio
+          to Deepgram, AssemblyAI, or OpenAI's Whisper API for processing. The
+          audio leaves your machine. It travels over the internet. It lands on
+          someone else's infrastructure. That's not local-first. That's
+          cloud-based with a privacy label.
+        </p>
+        <p>
+          Local-first means the audio never leaves at all. Not temporarily. Not
+          encrypted. Not &ldquo;anonymized.&rdquo; It stays on your Mac because
+          it's processed on your Mac.
+        </p>
+        <p>
+          Verify it yourself: turn on Airplane Mode. Thunder Kitty still works.
+          That's not a demo trick &mdash; it's the architecture.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE'RE BUILDING TOWARD -->
+  <section class="local-first__section local-first__section--alt">
+    <div class="container container--content">
+      <h2 class="local-first__section-heading">What we're building toward</h2>
+      <div class="local-first__section-body">
+        <p>
+          Thunder Kitty's goal is to push the boundary of what's possible in
+          local-first meeting intelligence on macOS. Today that means real-time
+          transcription using Apple's SpeechAnalyzer, on-device AI summaries via
+          Apple Intelligence and local models, and a notepad-first experience
+          designed around how professionals actually think before, during, and
+          after a meeting.
+        </p>
+        <p>
+          We're building toward per-agenda-item post-meeting summaries generated
+          entirely on your Mac. Toward meeting intelligence that understands
+          context across conversations. Toward a tool that gets meaningfully
+          smarter every time Apple ships a better on-device model &mdash;
+          without us ever needing to route your data through a cloud API to get
+          there.
+        </p>
+        <p>
+          The pace of on-device AI capability is accelerating. We're building at
+          the front of it, not waiting for the cloud to catch up.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY MACOS -->
+  <section class="local-first__section">
+    <div class="container container--content">
+      <h2 class="local-first__section-heading">Why macOS</h2>
+      <div class="local-first__section-body">
+        <p>
+          Apple Silicon and the Neural Engine make on-device AI genuinely fast.
+          Apple's SpeechAnalyzer &mdash; available in macOS 26 and later &mdash;
+          is a pro-grade speech recognition API that runs entirely on-device.
+          It's the same engine Apple uses for Apple Intelligence.
+        </p>
+        <p>
+          Other tools use Whisper.cpp or cloud APIs. Thunder Kitty uses the
+          platform's native engine. That's not a positioning choice &mdash; it's
+          a technical one. SpeechAnalyzer is faster, more accurate, and more
+          power-efficient than anything we could bundle ourselves.
+        </p>
+        <p>
+          We build for the platform that makes local-first possible at the
+          quality level professionals expect. Right now, that platform is macOS.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU CAN VERIFY -->
+  <section class="local-first__section local-first__section--alt">
+    <div class="container container--content">
+      <h2 class="local-first__section-heading">What you can verify</h2>
+      <div class="local-first__section-body">
+        <p>We'd rather you test the claims than trust the copy.</p>
+      </div>
+      <ul class="local-first__verify-list">
+        <li>
+          <strong>Turn on Airplane Mode.</strong>
+          Transcription still works.
+        </li>
+        <li>
+          <strong>Open Activity Monitor &rarr; Network</strong>
+          while recording. You'll see nothing.
+        </li>
+        <li>
+          <strong>Block Thunder Kitty in your firewall.</strong>
+          It still works.
+        </li>
+        <li>
+          <strong>Your notes are plain Markdown files</strong>
+          in your Documents folder. Open them in any app.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="local-first__section">
+    <div class="container container--content">
+      <h2 class="local-first__section-heading">Who this is for</h2>
+      <div class="local-first__section-body">
+        <p>
+          <a href="/for/therapists/">Therapists</a>
+          whose clients trust that what they say stays in the room.
+          <a href="/for/lawyers/">Lawyers</a>
+          who can't introduce a third party into a privileged conversation.
+          <a href="/for/consultants/">Consultants</a>
+          whose engagement letters promise confidentiality they need to actually
+          deliver.
+          <a href="/for/founders/">Founders</a>
+          in fundraising conversations. Executives in board meetings. Anyone who
+          handles conversations too sensitive for the cloud.
+        </p>
+        <p>
+          Or anyone who simply believes their notes shouldn't live on someone
+          else's server.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="local-first__closing">
+    <div class="container container--content">
+      <div class="local-first__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="local-first__cta-cat"
+        />
+        <div class="local-first__cta-card">
+          <p class="local-first__cta-headline">
+            Try the most private meeting tool on macOS.
+          </p>
+          <p class="local-first__cta-trial">
+            7-day free trial. No credit card. No account. Just a download.
+          </p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+---
+pagination:
+  data: meetingTemplates
+  size: 1
+  alias: template
+  addAllPagesToCollections: true
+permalink: "/meeting-templates/{{ template.slug }}/"
+pageCss: meeting-templates.css
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="meeting-tpl">
+  <!-- HERO -->
+  <section class="meeting-tpl__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Meeting Template</p>
+      <h1>{{ template.headline }}</h1>
+      <p class="meeting-tpl__subheadline">{{ template.subheadline }}</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="meeting-tpl__section">
+    <div class="container container--content">
+      <div class="meeting-tpl__section-body">
+        <p>{{ template.intro }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMPLATES -->
+  <section class="meeting-tpl__section meeting-tpl__section--alt">
+    <div class="container container--content">
+      {% for tpl in template.templates %}
+      <div
+        class="meeting-tpl__template{% if not loop.last %} meeting-tpl__template--bordered{% endif %}"
+      >
+        <h3 class="meeting-tpl__template-name">{{ tpl.name }}</h3>
+        <p class="meeting-tpl__template-desc">{{ tpl.description }}</p>
+
+        <ol class="meeting-tpl__agenda-list">
+          {% for item in tpl.items %}
+          <li class="meeting-tpl__agenda-item">
+            <span class="meeting-tpl__agenda-item-name">{{ item.name }}</span>
+            <ul class="meeting-tpl__agenda-item-questions">
+              {% for q in item.questions %}
+              <li>{{ q }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- REAL-TIME INTELLIGENCE -->
+  <section class="meeting-tpl__section meeting-tpl__section--realtime">
+    <div class="container container--content">
+      <h2 class="meeting-tpl__section-heading">
+        Built for real-time meeting intelligence
+      </h2>
+      <div class="meeting-tpl__section-body">
+        <p>{{ template.real_time_angle }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="meeting-tpl__closing">
+    <div class="container container--content">
+      <div class="meeting-tpl__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="meeting-tpl__cta-cat"
+        />
+        <div class="meeting-tpl__cta-card">
+          <p class="meeting-tpl__cta-headline">Try it free for 7 days.</p>
+          <p class="meeting-tpl__cta-note">{{ template.cta_note }}</p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

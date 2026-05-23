@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Thunder Kitty — for.css
+   Audience pages: /for/ index and /for/[slug]/ detail pages.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Section rhythm (matches compare.css pattern)
+   -------------------------------------------------------------------------- */
+.for section {
+  padding: var(--space-2xl) 0;
+}
+.for section + section {
+  padding-top: var(--space-xl);
+}
+
+h1 em,
+h2 em,
+h3 em {
+  font-style: italic;
+  color: var(--color-rose);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   HERO
+   -------------------------------------------------------------------------- */
+.for__hero {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.for__subheadline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--color-rose);
+  margin-bottom: var(--space-md);
+}
+
+.for__intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+  margin-top: var(--space-md);
+}
+.for__intro p {
+  margin-bottom: 1em;
+}
+.for__intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   BODY SECTIONS (narrative content)
+   -------------------------------------------------------------------------- */
+.for__section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.for__section:last-of-type {
+  border-bottom: 0;
+}
+
+.for__section--alt {
+  background: var(--color-paper-deep);
+  border-bottom: none;
+}
+
+.for__section-heading {
+  margin-bottom: var(--space-md);
+}
+
+.for__section-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+}
+.for__section-body p {
+  margin-bottom: 1.25em;
+}
+.for__section-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   USE CASES
+   -------------------------------------------------------------------------- */
+.for__use-cases {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.for__use-cases li {
+  position: relative;
+  padding: 1rem 0 1rem 2rem;
+  border-bottom: 1px dashed var(--color-line);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+.for__use-cases li:last-child {
+  border-bottom: 0;
+}
+
+.for__use-cases li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  color: var(--color-rose);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   CLOSING + CTA
+   -------------------------------------------------------------------------- */
+.for__closing {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.for__cta-wrap {
+  position: relative;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.for__cta-cat {
+  position: absolute;
+  top: -40px;
+  right: -120px;
+  width: 120px;
+  transform: rotate(8deg);
+  filter: drop-shadow(0 8px 20px rgba(26, 26, 26, 0.1));
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .for__cta-cat {
+    right: -20px;
+    width: 100px;
+    top: -35px;
+  }
+}
+@media (max-width: 640px) {
+  .for__cta-cat {
+    display: none;
+  }
+}
+
+.for__cta-card {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-radius: 6px;
+  padding: 2.5rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.for__cta-trial {
+  font-size: 1.1rem;
+  color: var(--color-paper);
+  font-weight: 500;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.for__cta-card .btn--primary {
+  background: var(--color-rose);
+  color: var(--color-paper);
+  margin-bottom: 1.25rem;
+}
+.for__cta-card .btn--primary:hover {
+  background: var(--color-coral);
+}
+
+.for__cta-note {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-ink-faded);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   INDEX PAGE — audience listing
+   -------------------------------------------------------------------------- */
+.for-index__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xl) 0 0;
+}
+
+.for-index__item {
+  border-bottom: 1px solid var(--color-line);
+}
+.for-index__item:first-child {
+  border-top: 1px solid var(--color-line);
+}
+
+.for-index__link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
+}
+.for-index__link:hover {
+  color: var(--color-rose);
+}
+.for-index__link:hover .for-index__arrow {
+  transform: translateX(4px);
+  color: var(--color-rose);
+}
+
+.for-index__name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-ink);
+}
+
+.for-index__tagline {
+  font-size: 0.95rem;
+  color: var(--color-ink-faded);
+  font-style: italic;
+}
+
+.for-index__arrow {
+  font-size: 1.25rem;
+  color: var(--color-ink-faded);
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+@media (max-width: 600px) {
+  .for-index__link {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .for-index__arrow {
+    display: none;
+  }
+}

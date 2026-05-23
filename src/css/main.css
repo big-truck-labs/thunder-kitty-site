@@ -380,6 +380,51 @@ pre {
 .site-footer__links a:hover {
   color: var(--color-rose);
 }
+
+/* Footer nav — multi-column link groups */
+.site-footer__nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  text-align: left;
+  margin-bottom: var(--space-lg);
+}
+@media (min-width: 600px) {
+  .site-footer__nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .site-footer__nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.site-footer__nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-footer__nav-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-faded);
+  margin: 0 0 0.25rem;
+}
+
+.site-footer__nav-group a {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.site-footer__nav-group a:hover {
+  color: var(--color-rose);
+}
 .site-footer__copy {
   font-size: 0.82rem;
   color: var(--color-ink-faded);

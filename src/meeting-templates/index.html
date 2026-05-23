@@ -1,0 +1,70 @@
+---
+title: Thunder Kitty | Meeting Templates
+description: Structured agendas for sales calls, 1:1s, standups, project kickoffs, and user research — built into Thunder Kitty's agenda panel.
+pageCss: meeting-templates.css
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="meeting-tpl">
+  <section class="meeting-tpl__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Meeting Templates</p>
+      <h1>
+        Structured agendas for the meetings
+        <em>that matter</em>
+      </h1>
+      <div class="meeting-tpl__intro">
+        <p>
+          Load any template into Thunder Kitty's agenda panel before your next
+          call. Check items off as you go. Get a per-item summary when it's
+          done.
+        </p>
+      </div>
+
+      <ul class="meeting-tpl-index__list">
+        {% for tpl in meetingTemplates %}
+        <li class="meeting-tpl-index__item">
+          <a
+            href="/meeting-templates/{{ tpl.slug }}/"
+            class="meeting-tpl-index__link"
+          >
+            <span>
+              <span class="meeting-tpl-index__name">{{ tpl.name }}</span>
+              <span class="meeting-tpl-index__tagline">
+                &mdash; {{ tpl.subheadline }}
+              </span>
+            </span>
+            <span class="meeting-tpl-index__arrow">&rarr;</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="meeting-tpl__closing">
+    <div class="container container--content">
+      <div class="meeting-tpl__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="meeting-tpl__cta-cat"
+        />
+        <div class="meeting-tpl__cta-card">
+          <p class="meeting-tpl__cta-headline">Try it free for 7 days.</p>
+          <p class="meeting-tpl__cta-note">
+            Every template ships with Thunder Kitty. No credit card. No account.
+            Just a download.
+          </p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

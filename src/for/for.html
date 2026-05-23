@@ -1,0 +1,97 @@
+---
+pagination:
+  data: audiences
+  size: 1
+  alias: audience
+  addAllPagesToCollections: true
+permalink: "/for/{{ audience.slug }}/"
+pageCss: for.css
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="for">
+  <!-- HERO -->
+  <section class="for__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Thunder Kitty for {{ audience.name }}</p>
+      <h1>{{ audience.headline }}</h1>
+      <p class="for__subheadline">{{ audience.subheadline }}</p>
+    </div>
+  </section>
+
+  <!-- WHY PRIVACY MATTERS -->
+  <section class="for__section">
+    <div class="container container--content">
+      <h2 class="for__section-heading">
+        Why privacy matters for
+        <em>{{ audience.name | lower }}</em>
+      </h2>
+      <div class="for__section-body">
+        <p>{{ audience.why_privacy_matters }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THUNDER KITTY FITS -->
+  <section class="for__section for__section--alt">
+    <div class="container container--content">
+      <h2 class="for__section-heading">How Thunder Kitty fits</h2>
+      <div class="for__section-body">
+        <p>{{ audience.how_tk_fits }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="for__section">
+    <div class="container container--content">
+      <h2 class="for__section-heading">
+        How {{ audience.name | lower }} use it
+      </h2>
+      <ul class="for__use-cases">
+        {% for uc in audience.use_cases %}
+        <li>{{ uc }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE (if present) -->
+  {% if audience.compliance_angle %}
+  <section class="for__section for__section--alt">
+    <div class="container container--content">
+      <h2 class="for__section-heading">On compliance</h2>
+      <div class="for__section-body">
+        <p>{{ audience.compliance_angle }}</p>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- CTA -->
+  <section class="for__closing">
+    <div class="container container--content">
+      <div class="for__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="for__cta-cat"
+        />
+        <div class="for__cta-card">
+          <p class="for__cta-trial">
+            Try Thunder Kitty free for 7 days. No credit card. No account. Just
+            a download.
+          </p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+          <p class="for__cta-note">{{ audience.cta_note }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

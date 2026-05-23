@@ -1,0 +1,70 @@
+---
+title: Thunder Kitty for your profession
+description: Private meeting notes for therapists, lawyers, consultants, sales professionals, and executives — transcribed on your Mac, never sent to the cloud.
+pageCss: for.css
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="for">
+  <section class="for__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Built for</p>
+      <h1>
+        Private meeting notes for
+        <em>your profession</em>
+      </h1>
+      <div class="for__intro">
+        <p>
+          Some conversations are too sensitive for cloud transcription. Thunder
+          Kitty processes everything on your Mac &mdash; no audio leaves your
+          device, ever.
+        </p>
+        <p>Here's how it fits the work you actually do.</p>
+      </div>
+
+      <ul class="for-index__list">
+        {% for aud in audiences %}
+        <li class="for-index__item">
+          <a href="/for/{{ aud.slug }}/" class="for-index__link">
+            <span>
+              <span class="for-index__name">{{ aud.name }}</span>
+              <span class="for-index__tagline">
+                &mdash; {{ aud.subheadline }}
+              </span>
+            </span>
+            <span class="for-index__arrow">&rarr;</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="for__closing">
+    <div class="container container--content">
+      <div class="for__cta-wrap">
+        <img
+          src="/images/cat-jumping.png"
+          alt=""
+          aria-hidden="true"
+          class="for__cta-cat"
+        />
+        <div class="for__cta-card">
+          <p class="for__cta-trial">
+            Try Thunder Kitty free for 7 days. No credit card. No account. Just
+            a download.
+          </p>
+          <a href="/download/" class="btn btn--primary btn--on-dark">
+            Download for macOS
+          </a>
+          <p class="for__cta-note">
+            Your meetings, your Mac, your files. Nothing else involved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

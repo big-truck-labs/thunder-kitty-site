@@ -30,11 +30,11 @@ h3 em {
 }
 
 .local-first__subheadline {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: var(--color-ink-soft);
-  max-width: 55ch;
-  margin-top: var(--space-md);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--color-rose);
+  margin-bottom: var(--space-md);
 }
 
 /* --------------------------------------------------------------------------

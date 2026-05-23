@@ -100,9 +100,12 @@ pageCss: legal.css
     Google's OAuth 2.0 and periodically fetches calendar event data — event
     titles, times, attendees, and video call links — using the Google Calendar
     API. This data is used solely to display upcoming meetings and is cached
-    only on your Mac. It is never transmitted off your device. Thunder Kitty
-    does not operate any servers that receive or store your personal data or
-    content. You can disconnect your Google account at any time in Settings,
+    only on your Mac. When connected, Thunder Kitty also accesses your Google
+    contact information (via the People API) to resolve attendee email addresses
+    to display names. Resolved names are stored locally on your device alongside
+    your meeting notes. This data is never transmitted off your device. Thunder
+    Kitty does not operate any servers that receive or store your personal data
+    or content. You can disconnect your Google account at any time in Settings,
     which immediately clears all cached Google Calendar data. Google's privacy
     policy governs the authentication process.
   </p>
@@ -168,6 +171,13 @@ pageCss: legal.css
       — read-only access to your Google Calendar event details and calendar list
       via Google's Calendar API, used for meeting display and note association.
       No Google Calendar data is ever written, modified, or stored persistently.
+    </li>
+    <li>
+      <strong>Google Contacts access (optional)</strong>
+      — read-only access to contact display names via the People API, used
+      solely to show attendee names instead of email addresses. Resolved names
+      are stored locally on your device; no contact data is modified or
+      transmitted.
     </li>
     <li>
       <strong>Notifications</strong>
@@ -254,27 +264,34 @@ pageCss: legal.css
     </a>
     , including the Limited Use requirements.
   </p>
-  <p>
-    Thunder Kitty's use of Google Calendar data is limited to the following:
-  </p>
+  <p>Thunder Kitty's use of Google API data is limited to the following:</p>
   <ul>
     <li>
       Calendar data is used solely to display your upcoming meetings within the
       app and associate recordings with the events they belong to
     </li>
-    <li>Calendar data is never used to serve advertising</li>
-    <li>Calendar data is never shared with third parties</li>
     <li>
-      Calendar data is never used for any purpose unrelated to meeting
-      transcription and note-taking
+      Contacts data is used solely to resolve attendee email addresses to
+      display names, stored locally alongside meeting notes
+    </li>
+    <li>
+      Neither calendar nor contacts data is ever used to serve advertising
+    </li>
+    <li>
+      Neither calendar nor contacts data is ever shared with third parties
+    </li>
+    <li>
+      Neither calendar nor contacts data is ever used for any purpose unrelated
+      to meeting transcription and note-taking
     </li>
   </ul>
   <p>
     <strong>Data protection:</strong>
-    Google Calendar data is transmitted only over encrypted HTTPS connections.
-    It is never written to disk, is held only in memory while the app is
-    running, and is cleared immediately when you disconnect your Google account
-    in Settings.
+    Google Calendar and Contacts data is transmitted only over encrypted HTTPS
+    connections. Resolved display names are stored locally on your device
+    alongside your meeting notes and are never transmitted off your device. All
+    cached Google data is cleared immediately when you disconnect your Google
+    account in Settings.
   </p>
 
   <h2>Changes to this policy</h2>

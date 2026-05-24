@@ -17,10 +17,28 @@ pageCss: for.css
       <p class="eyebrow">Thunder Kitty for {{ audience.name }}</p>
       <h1>{{ audience.headline }}</h1>
       <p class="for__subheadline">{{ audience.subheadline }}</p>
+      {% if audience.intro %}
+      <div class="for__intro">
+        <p>{{ audience.intro }}</p>
+      </div>
+      {% endif %}
     </div>
   </section>
 
-  <!-- WHY PRIVACY MATTERS -->
+  <!-- THE PROBLEM (new field — conditional) -->
+  {% if audience.the_problem %}
+  <section class="for__section">
+    <div class="container container--content">
+      <h2 class="for__section-heading">{{ audience.the_problem.heading }}</h2>
+      <div class="for__section-body">
+        <p>{{ audience.the_problem.body }}</p>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- WHY PRIVACY MATTERS (legacy field — conditional) -->
+  {% if audience.why_privacy_matters and not audience.the_problem %}
   <section class="for__section">
     <div class="container container--content">
       <h2 class="for__section-heading">
@@ -32,8 +50,48 @@ pageCss: for.css
       </div>
     </div>
   </section>
+  {% endif %}
 
-  <!-- HOW THUNDER KITTY FITS -->
+  <!-- WORKFLOW (new field — conditional) -->
+  {% if audience.workflow %}
+  <section class="for__section for__section--alt">
+    <div class="container container--content">
+      <h2 class="for__section-heading">{{ audience.workflow.heading }}</h2>
+      <div class="for__workflow">
+        {% for step in audience.workflow.steps %}
+        <div class="for__workflow-step">
+          <p class="for__workflow-label">{{ step.label }}</p>
+          <p class="for__workflow-body">{{ step.body }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- DIFFERENTIATORS (new field — conditional) -->
+  {% if audience.differentiators %}
+  <section class="for__section">
+    <div class="container container--content">
+      {% if audience.differentiators_heading %}
+      <h2 class="for__section-heading">
+        {{ audience.differentiators_heading }}
+      </h2>
+      {% endif %}
+      <div class="for__differentiators">
+        {% for diff in audience.differentiators %}
+        <div class="for__differentiator">
+          <h3 class="for__differentiator-heading">{{ diff.heading }}</h3>
+          <p class="for__differentiator-body">{{ diff.body }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- HOW THUNDER KITTY FITS (legacy field — conditional) -->
+  {% if audience.how_tk_fits and not audience.differentiators %}
   <section class="for__section for__section--alt">
     <div class="container container--content">
       <h2 class="for__section-heading">How Thunder Kitty fits</h2>
@@ -42,9 +100,12 @@ pageCss: for.css
       </div>
     </div>
   </section>
+  {% endif %}
 
   <!-- USE CASES -->
-  <section class="for__section">
+  <section
+    class="for__section{% if audience.differentiators %} for__section--alt{% endif %}"
+  >
     <div class="container container--content">
       <h2 class="for__section-heading">
         How {{ audience.name | lower }} use it
@@ -59,7 +120,9 @@ pageCss: for.css
 
   <!-- COMPLIANCE (if present) -->
   {% if audience.compliance_angle %}
-  <section class="for__section for__section--alt">
+  <section
+    class="for__section{% if not audience.differentiators %} for__section--alt{% endif %}"
+  >
     <div class="container container--content">
       <h2 class="for__section-heading">On compliance</h2>
       <div class="for__section-body">

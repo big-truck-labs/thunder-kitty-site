@@ -85,6 +85,67 @@ h3 em {
 }
 
 /* --------------------------------------------------------------------------
+   WORKFLOW (step-by-step section)
+   -------------------------------------------------------------------------- */
+.for__workflow {
+  max-width: 60ch;
+}
+
+.for__workflow-step {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.for__workflow-step:last-child {
+  border-bottom: 0;
+}
+
+.for__workflow-label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  margin: 0 0 0.5rem;
+}
+
+.for__workflow-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   DIFFERENTIATORS
+   -------------------------------------------------------------------------- */
+.for__differentiators {
+  max-width: 60ch;
+}
+
+.for__differentiator {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.for__differentiator:last-child {
+  border-bottom: 0;
+}
+
+.for__differentiator-heading {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+
+.for__differentiator-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
    USE CASES
    -------------------------------------------------------------------------- */
 .for__use-cases {

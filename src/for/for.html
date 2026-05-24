@@ -31,7 +31,7 @@ pageCss: for.css
     <div class="container container--content">
       <h2 class="for__section-heading">{{ audience.the_problem.heading }}</h2>
       <div class="for__section-body">
-        <p>{{ audience.the_problem.body }}</p>
+        <p>{{ audience.the_problem.body | safe }}</p>
       </div>
     </div>
   </section>
@@ -131,6 +131,24 @@ pageCss: for.css
     </div>
   </section>
   {% endif %}
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container container--content">
+      <h2 class="faq__heading">Common questions</h2>
+      {% for item in faqs.forPages.shared %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %} {% for item in faqs.forPages.byAudience[audience.slug] %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
 
   <!-- CTA -->
   <section class="for__closing">

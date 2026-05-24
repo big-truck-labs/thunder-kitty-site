@@ -1,0 +1,29 @@
+---
+permalink: /learn/feed.xml
+eleventyExcludeFromCollections: true
+layout: false
+tags: []
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ client.name }} — Learn</title>
+  <subtitle>{{ site.defaultDescription }}</subtitle>
+  <link href="{{ client.domain }}/learn/feed.xml" rel="self" />
+  <link href="{{ client.domain }}/learn/" />
+  <updated>{{ collections.learn | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ client.domain }}/learn/</id>
+  <author>
+    <name>{{ client.name }}</name>
+  </author>
+  {%- for post in collections.learn | reverse %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(client.domain) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <summary>{{ post.data.description }}</summary>
+    <content type="html">{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

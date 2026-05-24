@@ -1,5 +1,6 @@
 ---
-title: Thunder Kitty | Local-First Meeting Transcription for Mac
+title: Local-First Meeting Transcription for Mac
+metaTitle: Local-First Meeting Transcription for Mac | Thunder Kitty
 description: Thunder Kitty is a local-first meeting transcription tool for macOS. Real-time transcription, on-device AI, and meeting intelligence — nothing leaves your Mac.
 pageCss: local-first.css
 ---
@@ -16,10 +17,17 @@ pageCss: local-first.css
         <em>for Mac</em>
       </h1>
       <p class="local-first__subheadline">
-        Real-time transcription. On-device AI. Meeting intelligence that never
-        leaves your Mac. Not &ldquo;private by default.&rdquo; Not
-        &ldquo;encrypted in transit.&rdquo; Local-first. As in: nothing leaves.
+        Not &ldquo;private by default.&rdquo; Not &ldquo;encrypted in
+        transit.&rdquo; Local-first means the audio never leaves your Mac.
       </p>
+      <div class="local-first__intro">
+        <p>
+          Most transcription tools use &ldquo;privacy&rdquo; as a label. Thunder
+          Kitty uses it as an architecture. Real-time transcription, on-device
+          AI, and meeting intelligence &mdash; processed on your Mac, stored on
+          your Mac, never sent anywhere.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -167,6 +175,19 @@ pageCss: local-first.css
           else's server.
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container container--content">
+      <h2 class="faq__heading">Common questions</h2>
+      {% for item in faqs.localFirst %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %}
     </div>
   </section>
 

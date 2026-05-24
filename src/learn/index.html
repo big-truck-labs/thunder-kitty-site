@@ -1,0 +1,58 @@
+---
+title: Learn
+description: Technical writing from the team behind Thunder Kitty — local-first architecture, macOS audio, and building indie software.
+pageCss: learn.css
+layout: false
+override:tags: []
+permalink: /learn/
+---
+
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="learn">
+  <section class="learn-index__hero">
+    <div class="container container--content">
+      <p class="eyebrow">Learn</p>
+      <h1>
+        Notes from
+        <em>the workshop</em>
+      </h1>
+      <div class="learn-index__intro">
+        <p>
+          Technical writing from the team behind Thunder Kitty &mdash;
+          local-first architecture, macOS audio capture, and the realities of
+          building indie software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="learn-index__list-section">
+    <div class="container container--content">
+      <ul class="learn-index__list">
+        {% set posts = collections.learn | reverse %} {% for post in posts %}
+        <li class="learn-index__item">
+          <a href="{{ post.url }}" class="learn-index__link">
+            <span>
+              <span class="learn-index__name">{{ post.data.title }}</span>
+              <span class="learn-index__date">
+                &mdash; {{ post.date | isoDate }}
+              </span>
+            </span>
+            <span class="learn-index__arrow">&rarr;</span>
+          </a>
+          {% if post.data.description %}
+          <p class="learn-index__description">{{ post.data.description }}</p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+
+      <p class="learn-index__rss">
+        <a href="/learn/feed.xml">RSS feed</a>
+      </p>
+    </div>
+  </section>
+</article>
+
+{% endblock %}

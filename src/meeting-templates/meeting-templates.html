@@ -91,6 +91,24 @@ pageCss: meeting-templates.css
   </section>
   {% endif %}
 
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container container--content">
+      <h2 class="faq__heading">Common questions</h2>
+      {% for item in faqs.templatePages.shared %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %} {% for item in faqs.templatePages.bySlug[template.slug] %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="meeting-tpl__closing">
     <div class="container container--content">

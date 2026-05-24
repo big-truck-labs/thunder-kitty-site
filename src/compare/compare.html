@@ -101,6 +101,24 @@ pageCss: compare.css
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container container--content">
+      <h2 class="faq__heading">Common questions</h2>
+      {% for item in faqs.comparePages.shared %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %} {% for item in faqs.comparePages.bySlug[competitor.slug] %}
+      <details class="faq__item">
+        <summary>{{ item.q }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+
   <!-- CLOSING + CTA -->
   <section class="compare__closing">
     <div class="container container--content">

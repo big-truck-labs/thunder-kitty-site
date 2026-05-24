@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ client.name }} | {{ title }}</title>
+    <title>{{ metaTitle or (client.name + " | " + title) }}</title>
     <meta
       name="description"
       content="{{ description or site.defaultDescription }}"
@@ -15,7 +15,10 @@
 
     <link rel="canonical" href="{{ client.domain }}{{ page.url }}" />
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}" />
-    <meta property="og:title" content="{{ client.name }} | {{ title }}" />
+    <meta
+      property="og:title"
+      content="{{ metaTitle or (client.name + ' | ' + title) }}"
+    />
     <meta
       property="og:description"
       content="{{ description or site.defaultDescription }}"
@@ -28,7 +31,10 @@
     <meta property="og:site_name" content="{{ client.name }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ client.name }} | {{ title }}" />
+    <meta
+      name="twitter:title"
+      content="{{ metaTitle or (client.name + ' | ' + title) }}"
+    />
     <meta
       name="twitter:description"
       content="{{ description or site.defaultDescription }}"
@@ -52,6 +58,12 @@
     />
 
     <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="{{ client.name }} — Learn"
+      href="/learn/feed.xml"
+    />
 
     {% if site.analyticsId %}
     <script

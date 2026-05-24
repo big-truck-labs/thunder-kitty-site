@@ -1,0 +1,37 @@
+{% extends "layouts/base.html" %} {% block body %}
+
+<article class="learn-post">
+  <header class="learn-post__header">
+    <div class="container container--prose">
+      <a href="/learn/" class="learn-post__back">&larr; All posts</a>
+      <h1 class="learn-post__title">{{ title }}</h1>
+      <time class="learn-post__date" datetime="{{ date | isoDate }}">
+        {{ date | isoDate }}
+      </time>
+      {% if description %}
+      <p class="learn-post__description">{{ description }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="learn-post__body">
+    <div class="container container--prose">{{ content | safe }}</div>
+  </div>
+
+  <footer class="learn-post__footer">
+    <div class="container container--prose">
+      <hr />
+      <p class="learn-post__bio">
+        <em>
+          Thunder Kitty is a meeting recorder for macOS. It transcribes your
+          calls on-device, generates AI summaries, and stores everything as
+          local Markdown files.
+          <a href="/">thunderkitty.app</a>
+        </em>
+      </p>
+      <a href="/learn/" class="learn-post__back">&larr; All posts</a>
+    </div>
+  </footer>
+</article>
+
+{% endblock %}

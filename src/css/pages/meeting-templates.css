@@ -90,6 +90,59 @@ h3 em {
 }
 
 /* --------------------------------------------------------------------------
+   WORKFLOW (step-by-step section)
+   -------------------------------------------------------------------------- */
+.meeting-tpl__workflow {
+  max-width: 60ch;
+}
+
+.meeting-tpl__workflow-step {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.meeting-tpl__workflow-step:last-child {
+  border-bottom: 0;
+}
+
+.meeting-tpl__workflow-label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  margin: 0 0 0.5rem;
+}
+
+.meeting-tpl__workflow-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   ITEMS LIST (simple name-only list for show_items templates)
+   -------------------------------------------------------------------------- */
+.meeting-tpl__items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 60ch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.meeting-tpl__items-list li {
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
    TEMPLATE BLOCKS
    -------------------------------------------------------------------------- */
 .meeting-tpl__template {

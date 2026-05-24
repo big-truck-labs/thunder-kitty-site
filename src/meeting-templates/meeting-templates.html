@@ -23,7 +23,41 @@ pageCss: meeting-templates.css
     </div>
   </section>
 
-  <!-- TEMPLATES -->
+  <!-- THE PROBLEM (conditional) -->
+  {% if template.the_problem %}
+  <section class="meeting-tpl__section meeting-tpl__section--alt">
+    <div class="container container--content">
+      <h2 class="meeting-tpl__section-heading">
+        {{ template.the_problem.heading }}
+      </h2>
+      <div class="meeting-tpl__section-body">
+        <p>{{ template.the_problem.body }}</p>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- WORKFLOW (conditional) -->
+  {% if template.workflow %}
+  <section class="meeting-tpl__section">
+    <div class="container container--content">
+      <h2 class="meeting-tpl__section-heading">
+        {{ template.workflow.heading }}
+      </h2>
+      <div class="meeting-tpl__workflow">
+        {% for step in template.workflow.steps %}
+        <div class="meeting-tpl__workflow-step">
+          <p class="meeting-tpl__workflow-label">{{ step.label }}</p>
+          <p class="meeting-tpl__workflow-body">{{ step.body }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- TEMPLATES (only if show_items is true) -->
+  {% if template.show_items %}
   <section class="meeting-tpl__section meeting-tpl__section--alt">
     <div class="container container--content">
       {% for tpl in template.templates %}
@@ -32,35 +66,30 @@ pageCss: meeting-templates.css
       >
         <h3 class="meeting-tpl__template-name">{{ tpl.name }}</h3>
         <p class="meeting-tpl__template-desc">{{ tpl.description }}</p>
-
-        <ol class="meeting-tpl__agenda-list">
+        <ul class="meeting-tpl__items-list">
           {% for item in tpl.items %}
-          <li class="meeting-tpl__agenda-item">
-            <span class="meeting-tpl__agenda-item-name">{{ item.name }}</span>
-            <ul class="meeting-tpl__agenda-item-questions">
-              {% for q in item.questions %}
-              <li>{{ q }}</li>
-              {% endfor %}
-            </ul>
-          </li>
+          <li>{{ item.name }}</li>
           {% endfor %}
-        </ol>
+        </ul>
       </div>
       {% endfor %}
     </div>
   </section>
+  {% endif %}
 
-  <!-- REAL-TIME INTELLIGENCE -->
+  <!-- REAL-TIME INTELLIGENCE (conditional) -->
+  {% if template.real_time %}
   <section class="meeting-tpl__section meeting-tpl__section--realtime">
     <div class="container container--content">
       <h2 class="meeting-tpl__section-heading">
-        Built for real-time meeting intelligence
+        {{ template.real_time.heading }}
       </h2>
       <div class="meeting-tpl__section-body">
-        <p>{{ template.real_time_angle }}</p>
+        <p>{{ template.real_time.body }}</p>
       </div>
     </div>
   </section>
+  {% endif %}
 
   <!-- CTA -->
   <section class="meeting-tpl__closing">

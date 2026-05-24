@@ -112,8 +112,8 @@ module.exports = [
         body: "Thunder Kitty tracks your meeting agenda in real time as the conversation progresses. See at a glance which topics have been covered and which haven't, without breaking focus. Post-meeting, each agenda item gets its own AI summary generated entirely on your Mac. No cloud inference. Nothing leaves.",
       },
       {
-        heading: "Verify it yourself",
-        body: "Turn on Airplane Mode. Record a call. Read the transcript. The app works. That's not a privacy policy — it's a test you can run before your first billable hour.",
+        heading: "A record that's straightforward to produce",
+        body: "When documents need to be preserved under a litigation hold or produced in discovery, your transcripts are already plain text files in your Documents folder. No vendor portal, no export request, no waiting on a third party. The record is yours, in a format any system can read, under your control from the moment the meeting ends.",
       },
     ],
     use_cases: [
@@ -123,8 +123,6 @@ module.exports = [
       "Documenting M&A discussions and deal negotiations",
       "Searching across matter history by topic, issue, or client concern",
     ],
-    compliance_angle:
-      "Attorney-client privilege requires that communications remain confidential and not be voluntarily disclosed to third parties. Cloud-based transcription introduces a third party into that communication. Thunder Kitty's on-device architecture means no third party ever receives the audio — the privilege analysis stays clean.",
     cta_note:
       "Try it on a client call with Airplane Mode on. If the transcript is accurate and nothing left your Mac, you have your answer.",
   },
@@ -139,7 +137,7 @@ module.exports = [
       "Consultants handle sensitive client information across every engagement — strategic plans, financial data, organizational challenges, personnel decisions. Your engagement letters promise confidentiality. Most transcription tools route audio through cloud infrastructure, creating copies of client conversations on servers you don't control, under terms of service your clients never agreed to. Thunder Kitty runs entirely on your Mac. Record client calls, workshops, and strategy sessions knowing that nothing leaves your device — not to our servers, not to anyone's.",
     the_problem: {
       heading: "The confidentiality gap in cloud transcription",
-      body: "When you send a client conversation to a cloud transcription service, you're creating a copy of that conversation on someone else's infrastructure. That copy exists outside your control, subject to that vendor's data retention policies, security practices, and legal obligations. For a consultant working across multiple clients — some of whom may be competitors — that's a meaningful exposure. A data breach at your transcription provider could surface confidential strategy discussions from multiple engagements simultaneously. Thunder Kitty eliminates that exposure entirely because the audio never leaves your Mac.",
+      body: "Consultants often work across clients who compete with each other. The strategy discussion you had with Company A on Tuesday shouldn't be anywhere near the infrastructure you're using for Company B on Thursday. When you send a client conversation to a cloud transcription service, you're creating a copy of that conversation on shared infrastructure — subject to that vendor's security practices, data retention policies, and breach exposure. A single incident at your transcription provider could surface confidential strategy discussions from multiple engagements simultaneously. Thunder Kitty eliminates that exposure entirely because the audio never leaves your Mac.",
     },
     workflow: {
       heading: "What a client engagement looks like with Thunder Kitty",
@@ -166,7 +164,7 @@ module.exports = [
       },
       {
         heading: "Searchable across every engagement",
-        body: "Your notes are plain Markdown files in a folder you choose. Search across every client conversation in Spotlight, point an AI at the whole folder, or open them in Obsidian, iA Writer, or any tool you already use. Your meeting archive is yours to query however you want.",
+        body: "Your notes are plain Markdown files in a folder you choose — one folder per client if you want, or organized however you work. Search across every engagement in Spotlight. Point an AI at the whole archive and ask 'what did the CFO at Company X say about the integration timeline?' No platform login. No export. No vendor to call. The institutional knowledge you build across every engagement is yours to query, forever, in any tool you already use.",
       },
       {
         heading: "No bot joining the call",
@@ -177,8 +175,8 @@ module.exports = [
         body: "Thunder Kitty tracks which agenda items have been covered as the conversation progresses. If you set out to cover six discovery areas and only touched four, you'll know before the call ends. Post-meeting, each item gets its own AI summary on your Mac.",
       },
       {
-        heading: "Verify it yourself",
-        body: "Turn on Airplane Mode before your next client call. Transcription still works. That's the simplest way to confirm the claim before you stake your client relationships on it.",
+        heading: "Works offline, on any network, in any location",
+        body: "Client sites, hotel rooms, conference centers, airplanes — Thunder Kitty works anywhere your Mac works. Transcription runs on-device with no internet required. You're not dependent on the client's WiFi, your phone's hotspot, or any external service. Record in any environment, review anywhere.",
       },
     ],
     use_cases: [
@@ -200,7 +198,7 @@ module.exports = [
     subheadline:
       "Thunder Kitty gives sales reps accurate call transcripts and structured follow-through — with no bot joining the meeting.",
     intro:
-      "Sales calls are where deals are made or lost. Every discovery call surfaces information you need to remember — budget signals, decision timelines, competitive considerations, things the prospect said that they didn't mean to say. Most reps either take fragmented notes while half-listening, or rely on cloud tools that send their prospect's audio to external servers for processing. Thunder Kitty captures everything on your Mac — no bot, no cloud upload, no meeting participants to explain away. You stay present. The transcript is there when you need it.",
+      "The best sales reps aren't the ones who take the best notes. They're the ones who listen best. Every time you glance down to write something, you miss something else — the hesitation before the budget answer, the unsolicited mention of a competitor, the thing the economic buyer said that your champion didn't follow up on. Thunder Kitty captures everything so you don't have to choose between listening and remembering. No bot joins the call. Nothing leaves your Mac. You stay present, and the transcript is there when you need it.",
     the_problem: {
       heading: "What you're missing when you're taking notes",
       body: "The moment you switch from listening to writing, you stop hearing. You catch the gist but miss the subtext — the hesitation before the budget answer, the unsolicited mention of a competitor, the thing the economic buyer said that your champion didn't follow up on. Post-call reconstruction from memory is worse. The details that matter most fade fastest. Cloud transcription tools solve this but introduce a visible bot into the meeting — which changes prospect behavior before you say a word — or route your prospect's audio through external servers without their knowledge. Thunder Kitty records directly from your Mac with no bot and no upload. Nothing leaves.",
@@ -241,8 +239,8 @@ module.exports = [
         body: "Your call notes save as plain Markdown files — searchable across your entire pipeline in Spotlight, queryable with any AI, readable in any app. Pattern-match objections across prospects. Review what the economic buyer actually said three calls ago. Build institutional knowledge that doesn't live in a vendor's database.",
       },
       {
-        heading: "Nothing leaves your Mac",
-        body: "Audio is processed on your Mac using Apple's on-device speech engine. Your prospect's words — pricing discussions, competitive intelligence, budget signals — never touch an external server. Turn on Airplane Mode and confirm it yourself.",
+        heading: "Pattern-match across your entire pipeline",
+        body: "Every call note saves as a plain Markdown file — searchable across your whole pipeline in Spotlight, queryable with any AI. What objections keep coming up at the same stage? What does the economic buyer always ask that your champion never prepares you for? What question do you consistently fail to ask? The answers are in your transcripts. Thunder Kitty turns every call into institutional knowledge that compounds over time.",
       },
     ],
     use_cases: [
@@ -266,8 +264,9 @@ module.exports = [
     intro:
       "Executive conversations carry a different weight. Board discussions, M&A deliberations, compensation reviews, leadership assessments — these are the meetings where what was said, who said it, and exactly how it was framed can matter months or years later. You need an accurate record. You need it to be private. And you need it to be yours — not sitting in a transcription vendor's database under their retention policy and their security posture. Thunder Kitty keeps everything on your Mac. No cloud, no vendor, no exposure.",
     the_problem: {
-      heading: "The risk most executives haven't thought through",
-      body: "Cloud transcription services are convenient until they're not. A data breach at your transcription vendor could expose board discussions, deal terms, personnel decisions, and strategic plans — conversations you assumed were private because they happened in a small room. Even without a breach, your data exists in that vendor's infrastructure subject to their legal obligations, government requests, and acquisition history. Executives who use cloud tools for sensitive meetings are making a bet on that vendor's security posture, their legal team, and their future ownership. Thunder Kitty eliminates that bet entirely. Audio is processed on your Mac. Nothing leaves.",
+      heading:
+        "Why standard meeting tools aren't built for your most sensitive conversations",
+      body: "Most transcription tools were designed for team standups and sales calls — meetings where the content is operational, the participants are colleagues, and the stakes are manageable. Board discussions, M&A deliberations, and executive strategy sessions are a different category entirely. The content is sensitive. The participants include people who didn't choose your vendor. And the consequences of exposure — a breach, a government request, an acquisition of your transcription provider — could be significant. Thunder Kitty was built for exactly these meetings. Audio is processed on your Mac and never transmitted. There's nothing to breach because there's nothing to reach.",
     },
     workflow: {
       heading: "What a board meeting looks like with Thunder Kitty",
@@ -293,8 +292,8 @@ module.exports = [
         body: "Audio is processed on your Mac using Apple's on-device speech engine. Board discussions, M&A conversations, compensation reviews — none of it touches an external server. Your exposure is zero because the data never leaves.",
       },
       {
-        heading: "Plain files, no vendor lock-in",
-        body: "Your transcripts and notes save as plain Markdown files in your Documents folder. Straightforward to preserve under a litigation hold, produce in discovery, or archive for your own records — without calling anyone or waiting on an export tool.",
+        heading: "Built for records that need to last",
+        body: "For public companies, executive communications may be subject to SEC record-keeping requirements and litigation holds. Plain Markdown files stored locally are straightforward to preserve, search, and produce — no vendor cooperation, no export workflow, no waiting on a third party. The record exists on your terms from the moment the meeting ends.",
       },
       {
         heading: "Real-time agenda tracking for high-stakes meetings",
@@ -316,8 +315,6 @@ module.exports = [
       "Documenting 1:1s with direct reports on sensitive personnel matters",
       "Preserving a searchable record of decisions across every significant meeting",
     ],
-    compliance_angle:
-      "For public companies, executive communications may be subject to SEC record-keeping requirements and litigation holds. Plain Markdown files stored locally are straightforward to preserve, search, and produce — no vendor cooperation or export workflow required.",
     cta_note:
       "Try it for one board call. Airplane Mode on. If the transcript is accurate and nothing left your Mac, you'll know whether it fits.",
   },
@@ -329,7 +326,7 @@ module.exports = [
     subheadline:
       "Thunder Kitty gives founders a private record of the conversations that determine their company's future.",
     intro:
-      "Fundraising is a game of information asymmetry. Investor calls surface your strategy, your numbers, your concerns, your competitive positioning — often before you have any relationship with the person on the other end. Customer discovery calls reveal your product thinking before you've validated it. Co-founder and board conversations involve decisions you're not ready to be public about. These aren't conversations you want processed through a cloud transcription service's infrastructure. Thunder Kitty keeps everything on your Mac. Record every conversation that matters, knowing nothing leaves your device.",
+      "Fundraising is a game of information asymmetry. Investor calls surface your strategy, your numbers, your concerns, your burn rate — often before you have any relationship with the person on the other end. Customer discovery calls reveal your product thinking before you've validated it. Co-founder and board conversations involve decisions you're not ready to be public about. Most tools that promise to capture these conversations send the audio to cloud servers for processing. Your most sensitive discussions, on someone else's infrastructure. Thunder Kitty keeps everything on your Mac. Record every conversation that matters, knowing nothing leaves your device.",
     the_problem: {
       heading: "What most founders get wrong about meeting tools",
       body: "A visible bot joining your investor call signals something before you say a word — that you're using a tool, that you're recording, that someone or something else is in the room. Sophisticated investors notice. Even bot-free cloud tools route your audio through external servers for processing — audio that may include your valuation expectations, your burn rate conversation, your concerns about a co-founder. That data exists on someone else's infrastructure under their retention policy. Thunder Kitty captures audio directly from your Mac with no bot and no upload. The conversation stays between you and the person you're talking to.",
@@ -370,8 +367,9 @@ module.exports = [
         body: "Thunder Kitty tracks which agenda items have been covered as the conversation progresses. If you planned to test a specific narrative and haven't gotten to it with five minutes left, you'll know. Post-call, each item gets its own AI summary on your Mac.",
       },
       {
-        heading: "Works for every conversation that matters",
-        body: "Customer discovery, co-founder discussions, board calls, hiring conversations, partnership negotiations — Thunder Kitty works for any meeting where you need an accurate record and the content is too sensitive for the cloud.",
+        heading:
+          "The conversations that shaped your company, searchable forever",
+        body: "The customer discovery calls where you found product-market fit. The investor conversation where you first heard the objection you still haven't fully answered. The co-founder discussion where you decided to change direction. These conversations are the institutional memory of your company. Thunder Kitty saves them as plain Markdown files you own entirely — searchable, portable, queryable with any AI. The context that shaped every decision doesn't disappear into a vendor's database when you switch tools.",
       },
     ],
     use_cases: [

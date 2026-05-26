@@ -22,6 +22,41 @@ pageCss: legal.css
 
   <hr />
 
+  <h2>1.7.0</h2>
+  <p><em>May 26, 2026</em></p>
+  <p>
+    <strong>Your voice and theirs, always separate.</strong>
+    Thunder Kitty now captures your mic and system audio as two independent
+    streams in real time &mdash; every session, regardless of headphone state.
+    Previously, headphones were required to keep your voice cleanly separated
+    from everyone else on the call; without them, echo made the separation
+    unreliable. WebRTC&rsquo;s AEC3 solves the underlying problem: system audio
+    is used as an echo reference, and your mic feed is cleaned before it enters
+    the pipeline. The result is deterministic speaker separation from the moment
+    you start recording.
+  </p>
+  <p>
+    As a side effect: putting in or removing AirPods mid-recording now just
+    works. And voice enrollment is gone &mdash; with real stream separation,
+    it&rsquo;s no longer needed.
+  </p>
+  <ul>
+    <li>
+      <strong>Speaker&ndash;entity linking</strong>
+      &mdash; link transcript speaker labels to people in your entity store,
+      with type-ahead suggestions from attendees and known contacts. Mappings
+      persist in the note.
+    </li>
+    <li>
+      <strong>1:1 auto-assign</strong>
+      &mdash; Thunder Kitty automatically identifies the other speaker in
+      one-on-one meetings, so summaries use the right name from the first pass.
+    </li>
+    <li>MCP server updated with speaker&ndash;entity tools.</li>
+  </ul>
+
+  <hr />
+
   <h2>1.6.0</h2>
   <p><em>May 21, 2026</em></p>
   <p>

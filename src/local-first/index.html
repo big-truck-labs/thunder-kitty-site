@@ -78,19 +78,30 @@ pageCss: local-first.css
           after a meeting.
         </p>
         <p>
-          We're building real-time meeting intelligence that runs entirely on
-          your Mac &mdash; a live topic timeline that shows the structure of
-          your meeting as it unfolds, agenda tracking that tells you which items
-          you've covered and which you haven't, and per-agenda-item AI summaries
-          generated after the meeting using a local model. These aren't cloud
-          features waiting to be ported on-device. They're capabilities that are
-          only practical locally &mdash; continuous processing, zero marginal
-          cost, zero latency &mdash; things that would cost dollars per meeting
-          and add noticeable delay if they ran in the cloud.
+          The first version shipped in v1.9.0. A live topic timeline shows the
+          structure of your meeting as it unfolds. Agenda tracking tells you
+          which items you've covered and which you haven't, and per-agenda-item
+          summaries run after the meeting using a local model. All of it runs
+          entirely on your Mac &mdash; three models on the Neural Engine and
+          GPU, zero API calls &mdash; and all of it is in Settings &rarr; Labs
+          because it's deliberately early. It works, but it's not finished.
+        </p>
+        <p>
+          What's still ahead is bigger. Intelligence that understands context
+          across every conversation you've had &mdash; who you talked to, what
+          was promised, what changed. The full arc of a relationship with a
+          client, a candidate, a patient, built from months of meetings and
+          available at your fingertips. A concise picture of what happened
+          yesterday that informs what you do today and tomorrow. All of it on
+          your Mac. Nothing leaving the device.
         </p>
         <p>
           The pace of on-device AI capability is accelerating. We're building at
-          the front of it, not waiting for the cloud to catch up.
+          the front of it. If you want to see what running three models
+          on-device actually takes &mdash; including a seven-attempt fight with
+          a CoreML bug &mdash;
+          <a href="/learn/three-models-zero-api-calls/">here's the write-up</a>
+          .
         </p>
       </div>
     </div>

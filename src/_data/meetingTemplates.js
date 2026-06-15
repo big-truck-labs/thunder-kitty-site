@@ -30,7 +30,7 @@ module.exports = [
     },
     real_time: {
       heading: "Real-time framework tracking, on your Mac",
-      body: "Thunder Kitty tracks your sales framework in real time as the call progresses. Every item you load — Metrics, Economic Buyer, Decision Criteria, Champion — is tracked live. You can see at a glance which dimensions you've covered and which you haven't, without breaking eye contact or losing the thread of the conversation. When the call ends, each item gets its own AI summary generated entirely on your Mac. No cloud inference, no data leaving your device. Your prospect's words — pricing discussions, competitive intelligence, budget signals — stay between you and them.",
+      body: `Thunder Kitty tracks your sales framework in real time as the call progresses. Every item you load — Metrics, Economic Buyer, Decision Criteria, Champion — is tracked live. You can see at a glance which dimensions you've covered and which you haven't, without breaking eye contact or losing the thread of the conversation. When the call ends, each item gets its own AI summary generated entirely on your Mac. No cloud inference, no data leaving your device. Your prospect's words — pricing discussions, competitive intelligence, budget signals — stay between you and them. This is <a href="/learn/three-models-zero-api-calls/">Live Agenda Tracking</a> — shipped in v1.9.0, experimental, opt-in in Settings → Labs. Three models on your Mac's Neural Engine. Nothing touches a server.`,
     },
     show_items: true,
     templates: [
@@ -231,7 +231,7 @@ module.exports = [
     },
     real_time: {
       heading: "The agenda item you always skip",
-      body: "In most 1:1s, growth and development is the last item on the agenda and the first one to get cut when time runs short. Thunder Kitty tracks your agenda in real time as the meeting progresses. If you're fifteen minutes in and haven't touched feedback or growth, you'll see it — while there's still time to get there. Post-meeting, each item gets its own AI summary on your Mac. Over time, you have a searchable record of every commitment, every development goal, every piece of feedback exchanged in every 1:1 you've ever run.",
+      body: `In most 1:1s, growth and development is the last item on the agenda and the first one to get cut when time runs short. Thunder Kitty tracks your agenda in real time as the meeting progresses. If you're fifteen minutes in and haven't touched feedback or growth, you'll see it — while there's still time to get there. Post-meeting, each item gets its own AI summary on your Mac. Over time, you have a searchable record of every commitment, every development goal, every piece of feedback exchanged in every 1:1 you've ever run. This is <a href="/learn/three-models-zero-api-calls/">Live Agenda Tracking</a> — shipped in v1.9.0, experimental, opt-in in Settings → Labs. It runs on your Mac and the conversation stays between you and your direct report.`,
     },
     show_items: false,
     templates: [
@@ -305,7 +305,7 @@ module.exports = [
     },
     real_time: {
       heading: "A running record of every blocker your team has ever raised",
-      body: "Most standups produce no artifact. The blocker gets mentioned, someone nods, and by the next day everyone has forgotten whether it was resolved or just dropped. Thunder Kitty's per-item summaries mean every standup produces a structured record: what each person completed, what they're working on, what's in their way. Searchable across your entire standup history. The blocker that keeps coming up week after week becomes visible in a way it never was when standup notes lived in someone's memory.",
+      body: `Most standups produce no artifact. The blocker gets mentioned, someone nods, and by the next day everyone has forgotten whether it was resolved or just dropped. Thunder Kitty's per-item summaries mean every standup produces a structured record: what each person completed, what they're working on, what's in their way. Searchable across your entire standup history. The blocker that keeps coming up week after week becomes visible in a way it never was when standup notes lived in someone's memory. This is <a href="/learn/three-models-zero-api-calls/">Live Agenda Tracking</a> — shipped in v1.9.0, experimental, opt-in in Settings → Labs. Runs entirely on your Mac.`,
     },
     show_items: false,
     templates: [
@@ -363,7 +363,7 @@ module.exports = [
     },
     real_time: {
       heading: "The section that always gets cut",
-      body: "Risks and assumptions is the agenda item that most kickoffs never reach. The conversation runs long on objectives and scope, time runs out, and everyone leaves having skipped the most important discussion. Thunder Kitty tracks your kickoff agenda in real time. If you're running short and risks haven't been covered, you'll see it while you can still adjust. Post-meeting, each section gets its own AI summary — so the decisions made in the kickoff are captured in structured, searchable form from day one of the project.",
+      body: `Risks and assumptions is the agenda item that most kickoffs never reach. The conversation runs long on objectives and scope, time runs out, and everyone leaves having skipped the most important discussion. Thunder Kitty tracks your kickoff agenda in real time. If you're running short and risks haven't been covered, you'll see it while you can still adjust. Post-meeting, each section gets its own AI summary — so the decisions made in the kickoff are captured in structured, searchable form from day one of the project. This is <a href="/learn/three-models-zero-api-calls/">Live Agenda Tracking</a> — shipped in v1.9.0, experimental, opt-in in Settings → Labs. Three models on your Mac, no cloud, no data leaving the room.`,
     },
     show_items: false,
     templates: [
@@ -451,7 +451,7 @@ module.exports = [
     },
     real_time: {
       heading: "The workarounds section is where the product insight lives",
-      body: "In most research sessions, workarounds and hacks is the question that produces the most valuable answer — and the one most likely to get cut when time runs short. Thunder Kitty tracks your interview guide in real time. If you're running long and haven't reached decision criteria or workarounds, you'll see it while you can still redirect. Post-session, each section gets its own AI summary on your Mac. Your research archive is a collection of structured, searchable notes — not a folder of recordings you'll never have time to rewatch.",
+      body: `In most research sessions, workarounds and hacks is the question that produces the most valuable answer — and the one most likely to get cut when time runs short. Thunder Kitty tracks your interview guide in real time. If you're running long and haven't reached decision criteria or workarounds, you'll see it while you can still redirect. Post-session, each section gets its own AI summary on your Mac. Your research archive is a collection of structured, searchable notes — not a folder of recordings you'll never have time to rewatch. This is <a href="/learn/three-models-zero-api-calls/">Live Agenda Tracking</a> — shipped in v1.9.0, experimental, opt-in in Settings → Labs. Your participant's responses never leave your Mac.`,
     },
     show_items: false,
     templates: [

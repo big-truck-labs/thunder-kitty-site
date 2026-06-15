@@ -48,6 +48,11 @@ module.exports = [
         tk: "N/A — nothing sent",
         them: "Opt-out in settings",
       },
+      {
+        feature: "Real-time intelligence, on-device",
+        tk: "✓ (Labs)",
+        them: "✗",
+      },
       { feature: "Price", tk: "$10/month", them: "$14/month (Business)" },
     ],
 
@@ -89,6 +94,17 @@ module.exports = [
           `Thunder Kitty transcribes using Apple's SpeechAnalyzer — the same on-device engine powering Apple Intelligence, running entirely on your Mac. No cloud billing. No per-minute meter.`,
           `Record for 6 hours. Record 12 meetings in a day. Record yourself thinking through a problem out loud. No cap, no warnings, because the cost to us is zero.`,
           `Granola's free plan limits meeting history to 30 days. Unlimited history — and access to better AI models — requires the $14/month Business plan.`,
+        ],
+      },
+      {
+        id: "live-intelligence",
+        heading: "Live meeting intelligence — and where it runs",
+        body: [
+          `Granola has a mid-meeting AI chat — hit Cmd+J and ask questions about the conversation so far. "What did I miss?" "What were the action items?" It's useful, and it works during the meeting, not just after.`,
+          `The AI behind it runs in the cloud. Your transcript goes to Granola's providers, the model processes it, and the answer comes back. For most questions that's fine.`,
+          `Thunder Kitty 1.9.0 ships two experimental features in Settings → Labs. Live Agenda Tracking lets you set agenda items before a meeting and watches them shift from pending to in-progress to covered as the conversation happens — tracking a plan you set beforehand, not answering questions about what was said. Live Topic Timeline segments the meeting into topics as you record, showing the shape of the discussion as it builds.`,
+          `Both run <a href="/learn/three-models-zero-api-calls/">three models on your Mac's Neural Engine and GPU</a> — no API calls, no network, no data leaving the device. They work in airplane mode, like everything else in Thunder Kitty.`,
+          `These are Labs features — experimental, opt-in, and still rough in places. We shipped them because the underlying architecture works. We put them in Labs because the experience isn't finished.`,
         ],
       },
       {
@@ -179,6 +195,11 @@ module.exports = [
         tk: "N/A — nothing sent",
         them: "Opt-out in settings",
       },
+      {
+        feature: "Real-time intelligence, on-device",
+        tk: "✓ (Labs)",
+        them: "✗",
+      },
       { feature: "Price", tk: "$10/month", them: "$16.99/month (Pro)" },
     ],
 
@@ -218,6 +239,17 @@ module.exports = [
         body: [
           `Otter's Pro plan costs $16.99/month and includes 1,200 minutes — reduced from 6,000 minutes without a price reduction. When you hit that limit, the service stops entirely. No overages, no rollover, no grace period.`,
           `Thunder Kitty is $10/month with no recording limits of any kind. Record for six hours. Record twelve meetings in a day. The cost to us when you record more is zero, because nothing touches a server.`,
+        ],
+      },
+      {
+        id: "live-intelligence",
+        heading: "Live meeting intelligence — and where it runs",
+        body: [
+          `Otter already does real-time intelligence during meetings. Automated Live Summary updates in the Outline panel as the conversation moves. Otter AI Chat lets you ask questions mid-call. Action items and key takeaways surface automatically. These are mature, well-built features.`,
+          `They run in Otter's cloud. Your audio goes to Otter's servers, the models process it there, and the results come back. For most meetings that's fine.`,
+          `Thunder Kitty 1.9.0 ships two experimental features in Settings → Labs. Live Agenda Tracking lets you set agenda items before a meeting and watches them shift from pending to in-progress to covered as the conversation happens — not a post-meeting summary of what was discussed, but a live tracker of the plan you walked in with. Live Topic Timeline segments the meeting into topics as you record, showing the structure of the discussion as it unfolds. The topic timeline overlaps with what Otter's Outline already does; the agenda tracker does something different.`,
+          `The difference that matters to some people: Thunder Kitty's features run <a href="/learn/three-models-zero-api-calls/">three models on your Mac's Neural Engine and GPU</a> — no API calls, no network, no data leaving the device. They work in airplane mode. Otter's require Otter's infrastructure.`,
+          `These are Labs features — experimental, opt-in, and still rough in places. We shipped them because the underlying architecture works. We put them in Labs because the experience isn't finished.`,
         ],
       },
       {
@@ -316,6 +348,11 @@ module.exports = [
         tk: "None",
         them: "Federal BIPA class action (2025)",
       },
+      {
+        feature: "Real-time intelligence, on-device",
+        tk: "✓ (Labs)",
+        them: "✗",
+      },
       { feature: "Price", tk: "$10/month", them: "$18/month (Pro, monthly)" },
     ],
 
@@ -347,6 +384,17 @@ module.exports = [
           `The reason: building voiceprints of people in your meetings — even locally, even on your own Mac — means making a decision about other people's biometric data without their knowledge. The person who downloaded Thunder Kitty consented to it. The person on the other end of their call didn't.`,
           `So Thunder Kitty does voice enrollment for the user only. You can enroll your own voice and Thunder Kitty will always know when it's you speaking, across every meeting you record. Other speakers are identified as Speaker 1, Speaker 2, and so on. You can rename them in a transcript and it cascades through that session — but we don't fingerprint anyone who didn't ask us to.`,
           `It's a smaller feature. We think it's the right call.`,
+        ],
+      },
+      {
+        id: "live-intelligence",
+        heading: "Live meeting intelligence — and where it runs",
+        body: [
+          `Fireflies has a capable set of live features. The Live Assist panel shows auto-structured notes and real-time transcription during the call. AskFred lets you ask questions mid-meeting, search the web, and pull context from previous meetings. Dynamic Topic Suggestions surface themes as the conversation moves. It's a lot of real-time intelligence.`,
+          `All of it runs through Fireflies' bot and cloud infrastructure. The bot joins the call, the audio goes to Fireflies' servers, and the models run there.`,
+          `Thunder Kitty 1.9.0 ships two experimental features in Settings → Labs. Live Agenda Tracking lets you set agenda items before a meeting and watches them shift from pending to in-progress to covered as the conversation happens — tracking a plan you walked in with, not just describing what was said. Live Topic Timeline segments the meeting into topics as you record, showing the structure of the discussion as it unfolds.`,
+          `Both run <a href="/learn/three-models-zero-api-calls/">three models on your Mac's Neural Engine and GPU</a> — no API calls, no network, no data leaving the device. They work in airplane mode. Fireflies' live features require Fireflies' servers and a bot in the room.`,
+          `These are Labs features — experimental, opt-in, and still rough in places. Fireflies' Live Assist is more comprehensive. Thunder Kitty's runs on your Mac and stays there.`,
         ],
       },
     ],
@@ -421,6 +469,11 @@ module.exports = [
         tk: "Unlimited",
         them: "5/month (free) / unlimited (Premium)",
       },
+      {
+        feature: "Real-time intelligence, on-device",
+        tk: "✓ (Labs)",
+        them: "✗",
+      },
       { feature: "Price", tk: "$10/month", them: "$20/month (Premium)" },
     ],
 
@@ -459,6 +512,16 @@ module.exports = [
         body: [
           `When a meeting ends in Thunder Kitty, your notes and transcript sit in ~/Documents/Thunder Kitty Notes/ as a plain markdown file. Open it in any app. Point Claude at the whole folder and ask questions across every conversation you've ever recorded.`,
           `Fathom's recordings and transcripts live in Fathom's database. The product is excellent, but the archive is theirs.`,
+        ],
+      },
+      {
+        id: "live-intelligence",
+        heading: "During the meeting, not after it — and on your Mac",
+        body: [
+          `Fathom's core strength has been post-meeting intelligence: fast, accurate summaries and action items that land within seconds of the call ending. With Fathom 3.0 in April 2026, a live summary was added to the new desktop experience — a useful step toward during-the-meeting intelligence. Both run through Fathom's cloud.`,
+          `Thunder Kitty 1.9.0 ships two experimental features in Settings → Labs. Live Agenda Tracking lets you set agenda items before a meeting and watches them shift from pending to in-progress to covered as the conversation happens. It doesn't describe what was said after the fact — it tracks whether the conversation followed the plan you walked in with. Live Topic Timeline segments the meeting into topics as you record.`,
+          `Both run <a href="/learn/three-models-zero-api-calls/">three models on your Mac's Neural Engine and GPU</a> — no API calls, no network, no data leaving the device. They work in airplane mode, like everything else in Thunder Kitty.`,
+          `These are Labs features — experimental, opt-in, and still rough in places. We shipped them because the underlying architecture works. We put them in Labs because the experience isn't finished.`,
         ],
       },
     ],

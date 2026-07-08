@@ -40,6 +40,14 @@ module.exports = {
         q: "Can I search across my entire meeting history?",
         a: "Yes — in a few different ways. Your notes are plain Markdown files, so macOS Spotlight searches across all of them. You can also open the folder in Obsidian, iA Writer, or any notes app. For more powerful querying, Thunder Kitty runs as a local MCP server for Claude Desktop: ask questions across months of transcripts directly from Claude\u2019s interface, with no data leaving your Mac.",
       },
+      {
+        q: "Does Thunder Kitty work with my calendar?",
+        a: "Yes \u2014 both Apple Calendar and Google Calendar. Thunder Kitty pulls in your events so each meeting is ready to record with the right people already attached, and notifies you before it starts. It reads your calendar and never writes to it \u2014 no bot invites, nothing showing up on anyone else\u2019s screen. Apple Calendar runs entirely through macOS. Google Calendar is opt-in: connect it once and Thunder Kitty fetches only your calendar data \u2014 never your audio or transcripts, which never leave your Mac.",
+      },
+      {
+        q: "Can I control how Thunder Kitty summarizes meetings?",
+        a: "Yes. You can write your own summary templates \u2014 what to focus on, what to skip, how to structure the output \u2014 and keep as many as you want for different meeting types. Set a global default and override it on any individual note. By default, summaries generate on-device using Apple Intelligence or a local model, so nothing leaves your Mac. If you\u2019d rather use a frontier model, you can connect your own OpenAI, Anthropic, or Google key \u2014 that\u2019s the one case where transcript text is sent out, and it\u2019s entirely your choice.",
+      },
     ],
 
     byAudience: {

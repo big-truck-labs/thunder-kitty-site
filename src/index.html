@@ -51,7 +51,7 @@ pageCss: home.css
   <div class="container">
     <p class="eyebrow">How it works</p>
     <h2 class="acts__heading">
-      Two things it does.
+      Three things it does.
       <em>Simply.</em>
     </h2>
 
@@ -649,6 +649,289 @@ pageCss: home.css
         </div>
       </div>
     </div>
+
+    <!-- ===== STAGE 3: THE RECAP ===== -->
+    <div class="stage">
+      <div class="stage__intro">
+        <p class="stage__label">Stage 3</p>
+        <h3 class="stage__title">The Recap.</h3>
+        <p class="stage__desc">
+          The next morning, Thunder Kitty reads back yesterday — what you
+          settled, what's still open, what to carry into today — across every
+          meeting you had. Generated overnight on your Mac, before your first
+          one.
+        </p>
+      </div>
+
+      <div class="stage__mockup-wrap">
+        <div
+          class="mockup-window relative border border-line bg-paper-deep shadow-2xl mx-auto max-w-full md:max-w-3xl"
+        >
+          <!-- Window chrome -->
+          <div
+            class="flex items-center gap-1.5 px-3.5 py-2 border-b border-line"
+          >
+            <span class="w-3 h-3 rounded-full bg-[#ff5f57] inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-[#febc2e] inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28c840] inline-block"></span>
+          </div>
+          <div class="flex min-h-[320px] md:min-h-[500px]">
+            <!-- Sidebar -->
+            <div
+              class="hidden md:flex flex-col w-48 bg-cardstock/40 border-r border-line text-sm"
+            >
+              <!-- App name -->
+              <div
+                class="px-4 pt-3 pb-3 font-medium text-ink flex items-center gap-1.5"
+              >
+                <span class="text-rose">⚡</span>
+                Thunder Kitty
+              </div>
+
+              <!-- Nav items -->
+              <div class="flex-1 overflow-hidden">
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="flex items-center gap-2 text-ink-soft">
+                    <svg
+                      class="w-3.5 h-3.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <span>Today</span>
+                  </div>
+                </div>
+                <!-- Yesterday — active -->
+                <div class="px-3 py-2 bg-rose-soft/40 border-l-2 border-rose">
+                  <div class="flex items-center gap-2 text-ink font-medium">
+                    <svg
+                      class="w-3.5 h-3.5 text-rose"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>Yesterday</span>
+                  </div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="flex items-center gap-2 text-ink-soft">
+                    <svg
+                      class="w-3.5 h-3.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                    <span>Notes</span>
+                  </div>
+                </div>
+                <div class="px-3 py-2 hover:bg-cardstock/40">
+                  <div class="flex items-center gap-2 text-ink-soft">
+                    <svg
+                      class="w-3.5 h-3.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                    <span>Trash</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Settings at bottom -->
+              <div class="mt-auto px-3 py-2 border-t border-line">
+                <div class="flex items-center gap-2 text-ink-faded">
+                  <svg
+                    class="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                  <span class="text-[11px]">Settings</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main content area -->
+            <div class="flex-1 flex flex-col bg-paper overflow-hidden">
+              <!-- Eyebrow row -->
+              <div
+                class="flex items-center justify-between px-3 md:px-5 py-2.5 border-b border-line"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="text-rose text-sm">⚡</span>
+                  <span
+                    class="text-[10px] uppercase tracking-widest font-semibold text-ink-faded"
+                  >
+                    Yesterday
+                  </span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-ink-faded">
+                  <span>‹</span>
+                  <span class="font-medium">Wednesday, April 23</span>
+                  <span>›</span>
+                </div>
+              </div>
+
+              <!-- Recap content -->
+              <div
+                class="flex-1 px-3 py-3 md:px-6 md:py-5 overflow-hidden relative"
+              >
+                <!-- Greeting -->
+                <h4 class="font-display text-2xl text-ink mb-1">
+                  Good morning.
+                </h4>
+                <p class="text-sm text-ink-faded mb-4">
+                  Four meetings — and the board call reset the quarter.
+                </p>
+
+                <!-- Summary -->
+                <p class="text-sm leading-relaxed text-ink-soft mb-5">
+                  You talked through the consulting offer with Maya, then walked
+                  the board through Q1 numbers and came out with a reordered
+                  roadmap. The design review signed off on the new onboarding
+                  flow, and you closed the day with a therapy session.
+                </p>
+
+                <!-- What you settled -->
+                <div
+                  class="text-[10px] uppercase tracking-widest text-ink-faded font-medium mb-2.5"
+                >
+                  What you settled
+                </div>
+                <ul class="text-sm space-y-2 mb-1">
+                  <li class="flex gap-2 text-ink-soft">
+                    <span class="text-[#28c840] flex-shrink-0">✓</span>
+                    <span>
+                      Analytics rebuild moves to Q2; onboarding takes its slot.
+                    </span>
+                  </li>
+                  <li class="flex gap-2 text-ink-soft">
+                    <span class="text-[#28c840] flex-shrink-0">✓</span>
+                    <span>
+                      New onboarding flow approved — ships behind a flag first.
+                    </span>
+                  </li>
+                  <li class="flex gap-2 text-ink-soft">
+                    <span class="text-[#28c840] flex-shrink-0">✓</span>
+                    <span>
+                      Consulting offer: leaning yes, pending revised terms from
+                      Maya.
+                    </span>
+                  </li>
+                </ul>
+                <div class="text-[11px] text-ink-faded mb-5 pl-5">
+                  Show 1 more ⌄
+                </div>
+
+                <!-- Still open -->
+                <div
+                  class="text-[10px] uppercase tracking-widest text-ink-faded font-medium mb-2.5"
+                >
+                  Still open
+                </div>
+                <div class="border border-line rounded-lg overflow-hidden">
+                  <div class="flex items-center justify-between px-3 py-2.5">
+                    <span class="text-sm text-ink-soft">
+                      Send Maya your questions on the contract structure.
+                    </span>
+                    <span
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-slate/20 text-slate text-[10px] font-medium inline-flex items-center justify-center ml-3"
+                    >
+                      MB
+                    </span>
+                  </div>
+                  <div
+                    class="border-t border-line flex items-center justify-between px-3 py-2.5"
+                  >
+                    <span class="text-sm text-ink-soft">
+                      Draft the Q2 roadmap doc for board sign-off.
+                    </span>
+                    <span
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-rose/20 text-rose text-[10px] font-medium inline-flex items-center justify-center ml-3"
+                    >
+                      S
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Fade overlay to suggest content continues -->
+                <div
+                  class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-paper to-transparent pointer-events-none"
+                ></div>
+              </div>
+
+              <!-- Bottom status bar -->
+              <div
+                class="mt-auto flex items-center justify-between px-3 md:px-5 py-2 border-t border-line bg-paper-deep/50"
+              >
+                <div class="flex items-center gap-3 text-[11px] text-ink-faded">
+                  <span>Generated 7:02 AM</span>
+                </div>
+                <div
+                  class="flex items-center gap-1.5 text-[11px] text-ink-faded"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>On-device</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -804,8 +1087,8 @@ pageCss: home.css
           Zoom, Meet, Teams, Discord, FaceTime, phone calls &mdash; or no video
           app at all. Talk to yourself if you want. Thunder Kitty is invisible:
           no bots, no plugins, no calendar invites. Already have a recording?
-          Import audio files or existing transcripts and they land in a note
-          just like a live recording.
+          Import audio, video, a YouTube URL, or an existing transcript and they
+          land in a note just like a live recording.
         </p>
       </div>
     </div>
@@ -929,6 +1212,10 @@ pageCss: home.css
         <li>Checking for app updates (once a day, no data attached)</li>
         <li>Validating your license (your key, nothing else)</li>
         <li>Calls to your own API key &mdash; only if you turn that on</li>
+        <li>
+          Fetching your Google Calendar &mdash; only if you connect it, and only
+          your calendar. Never your audio, never your transcripts.
+        </li>
       </ul>
       <p class="privacy__note">
         That's the whole list. Your audio never touches the network. Your
@@ -1084,6 +1371,23 @@ pageCss: home.css
     </details>
 
     <details class="faq__item">
+      <summary>Can I control how Thunder Kitty summarizes meetings?</summary>
+      <div class="faq__answer">
+        <p>
+          Yes. You can write your own summary templates &mdash; what to focus
+          on, what to skip, how to structure the output &mdash; and keep as many
+          as you want for different meeting types. Set a global default and
+          override it on any individual note. By default, summaries generate
+          on-device using Apple Intelligence or a local model, so nothing leaves
+          your Mac. If you&rsquo;d rather use a frontier model, you can connect
+          your own OpenAI, Anthropic, or Google key &mdash; that&rsquo;s the one
+          case where transcript text is sent out, and it&rsquo;s entirely your
+          choice.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
       <summary>
         Can I use my Thunder Kitty notes with Claude or other AI tools?
       </summary>
@@ -1133,6 +1437,22 @@ pageCss: home.css
           built on Apple's newest SpeechAnalyzer API &mdash; the same one used
           by Apple Intelligence &mdash; because it delivers the best on-device
           transcription available.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq__item">
+      <summary>Does Thunder Kitty work with my calendar?</summary>
+      <div class="faq__answer">
+        <p>
+          Yes &mdash; both Apple Calendar and Google Calendar. Thunder Kitty
+          pulls in your events so each meeting is ready to record with the right
+          people already attached, and notifies you before it starts. It reads
+          your calendar and never writes to it &mdash; no bot invites, nothing
+          showing up on anyone else&rsquo;s screen. Apple Calendar runs entirely
+          through macOS. Google Calendar is opt-in: connect it once and Thunder
+          Kitty fetches only your calendar data &mdash; never your audio or
+          transcripts, which never leave your Mac.
         </p>
       </div>
     </details>

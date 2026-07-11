@@ -272,6 +272,82 @@ pre {
 }
 
 /* --------------------------------------------------------------------------
+   Brag banner — self-awarded #1 badge strip above the nav
+   -------------------------------------------------------------------------- */
+.brag-banner {
+  background: var(--color-rose);
+  color: #fbf6ee;
+  padding: 14px 0;
+  text-align: center;
+}
+
+.brag-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.brag-banner__trophy {
+  height: 64px;
+  width: 64px;
+  flex-shrink: 0;
+  color: #fbf6ee;
+  opacity: 0.85;
+}
+
+.brag-banner__text {
+  text-align: left;
+}
+
+.brag-banner__headline {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.brag-banner__subtext {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.78rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin: 2px 0 0;
+  line-height: 1.4;
+}
+
+.brag-banner__footnote {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  opacity: 0.5;
+  margin: 4px 0 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 700px) {
+  .brag-banner__inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .brag-banner__trophy {
+    height: 48px;
+    width: 48px;
+  }
+
+  .brag-banner__text {
+    text-align: center;
+  }
+
+  .brag-banner__headline {
+    font-size: 0.9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Header + Footer (lives in components/header.html and footer.html)
    -------------------------------------------------------------------------- */
 .site-header {
